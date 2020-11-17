@@ -1,0 +1,210 @@
+#!/usr/bin/env node
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ext-language_tools.js"></script>
+<script type="text/javascript">
+    
+    RED.nodes.registerType('SZ Object Detection',{
+        category: 'Shen Zhou',
+        color: '#fdd0a2',
+        defaults: {
+	    name: {value: "", required:false},
+	    intype: {value: "0", required:true},
+	    tputype: {value: "0", required:true},
+            tpunum: {value: "0", required:true},
+            modelpath: {value: "", required:true},
+            labelpath: {value: "", required:true},
+            threshold: {value: "0.1", required:true},
+	    topk: {value: "4", required:true},
+	    keepratio: {value: "0", required:true},
+	    relativecoord: {value: "1", required: true},
+	    resample: {value: "0", required: true},
+	    outimage: {value: 'true'}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "function.png",
+        label: function() {
+            return this.name || 'SZ-Object Detection';
+        },
+        oneditprepare: function() {
+            $( "#node-input-outputs" ).spinner({
+                min:1
+            });
+            var langTools = ace.require('ace/ext/language_tools');
+            this.editor = ace.edit('node-input-func-editor');
+            this.editor.setTheme('ace/theme/tomorrow');
+            this.editor.getSession().setMode('ace/mode/python');
+            this.editor.setValue($("#node-input-func").val(), -1);
+            this.editor.setOptions({
+                    enableBasicAutocompletion: true,
+                    enableLiveAutocompletion: true,
+                    highlightSelectedWord: true,
+                    useSoftTabs: true,
+                    tabSize: 4,
+            });
+            var noderedKeywords = [
+                'msg', 'msg.payload', 'node', 'node.send',
+                'node.log', 'node.warn', 'node.error', 'node.status'
+            ];
+            this.editor.completers.push({
+                getCompletions: function (state, session, pos, prefix, callback) {
+                    callback(null, noderedKeywords.map(function (word) {
+                        return {
+                            name: word,
+                            value: word,
+                            score: 0,
+                            meta: 'Node-RED'
+                        };
+                    }));
+                }
+            });
+            this.editor.focus();
+        },
+        oneditsave: function() {
+            var annot = this.editor.getSession().getAnnotations();
+            this.noerr = 0;
+            $("#node-input-noerr").val(0);
+            for (var k=0; k < annot.length; k++) {
+                //console.log(annot[k].type,":",annot[k].text, "on line", annot[k].row);
+                if (annot[k].type === "error") {
+                    $("#node-input-noerr").val(annot.length);
+                    this.noerr = annot.length;
+                }
+            }
+            $("#node-input-func").val(this.editor.getValue());
+            delete this.editor;
+        },
+        oneditresize: function(size) {
+            var rows = $("#dialog-form>div:not(.node-text-editor-row)");
+            var height = $("#dialog-form").height();
+            for (var i=0;i<rows.size();i++) {
+                height -= $(rows[i]).outerHeight(true);
+            }
+            var editorRow = $("#dialog-form>div.node-text-editor-row");
+            height -= (parseInt(editorRow.css("marginTop"))+parseInt(editorRow.css("marginBottom")));
+            $(".node-text-editor").css("height",height+"px");
+            this.editor.resize();
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="SZ Object Detection">
+    <div class="form-row node-input-name">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name of the node">
+    </div>
+    <div class="form-row">
+	<label for="node-input-intype"><i class="fa fa-tag"></i> Input Type</label>
+	<select id="node-input-intype">
+            <option value="0"> URL</option>
+            <option value="1"> Camera</option>
+            <option value="2"> Video</option>
+            <option value="3"> Image</option>
+        </select>
+    </div>
+    <div class="form-row">
+	<label for="node-input-tputype"><i class="fa fa-tag"></i> TPU Type</label>
+	<select id="node-input-tputype">
+            <option value="0"> ShenZhou (PCIe)</option>
+            <option value="1"> USB Accelerator (USB)</option>
+        </select>
+    </div>
+    <div class="form-row node-input-tpunum">
+        <label for="node-input-tpunum"><i class="fa fa-tag"></i> TPU Number</label>
+        <input type="text" id="node-input-tpunum" placeholder="Device Number (int)">
+    </div>
+
+    <div class="form-row node-input-modelpath">
+        <label for="node-input-modelpath"><i class="fa fa-tag"></i> Model Path</label>
+        <input type="text" id="node-input-modelpath" placeholder="modelpath with extension">
+    </div>
+
+    <div class="form-row node-input-labelpath">
+        <label for="node-input-labelpath"><i class="fa fa-tag"></i> Label Path</label>
+        <input type="text" id="node-input-labelpath" placeholder="labelpath with extension">
+    </div>
+    
+    <!-- API Parameters -->
+    <div class="form-row">
+        <label style="width:auto" for="node-input-api-parameter"><i class="fa fa-envelope-o"></i> Object Detection API Parameters</label>
+    </div>
+    
+    <div class="form-row">
+	<label style="padding-left:25px; margin-right:-25px">threshold</label>        
+	<input type="text" id="node-input-threshold" placeholder="threshold (float)">
+    </div>
+    <div class="form-row">
+	<label style="padding-left:25px; margin-right:-25px">top_k</label>        
+	<input type="text" id="node-input-topk" placeholder=" top_k (int)">
+    </div>
+    <div class="form-row">
+	<label style="padding-left:25px; margin-right:-25px">keep_ratio</label>
+	<select id="node-input-keepratio">
+            <option value="1"> True</option>
+            <option value="0"> False</option>
+        </select>
+    </div>
+    <div class="form-row">
+	<label style="padding-left:25px; margin-right:-25px">relative_coord</label>        
+	<select id="node-input-relativecoord">
+            <option value="1"> True</option>
+            <option value="0"> False</option>
+        </select>
+    </div>
+    <div class="form-row">
+	<label style="padding-left:25px; margin-right:-25px">resample</label>        
+	<select id="node-input-resample">
+            <option value="0"> PIL.Image.NEAREST</option>
+            <option value="1"> PIL.Image.BOX</option>
+            <option value="2"> PIL.Image.BILIEAR</option>
+            <option value="3"> PIL.Image.HAMMING</option>
+            <option value="4"> PIL.Image.BICUBIC</option>
+            <option value="5"> PIL.Image.LANCZOS</option>
+        </select>
+    </div>
+    <!-- API Parameters -->
+    <div class="form=row">
+	<label for="node-input-image"><i class="fa fa-picture-o"></i> Output Image</label>
+	<input type="checkbox" id="node-input-outimage" style="width:2%; transform: scale(1.9); margin-left: 1%; vertical-align: text-bottom;">
+</script>
+    </div>
+
+
+<script type="text/x-red" data-help-name="SZ Object Detection">
+    <p>Just like the plain old Javascript function node, but writting Python!</p>
+    <p>All functionality of the javascript function node is to be expected (now or in the near future, or in a parallel universe)</p>
+    <p>Virtually all posible incoming messages are supported, available as a Python dictionary. However bear in mind that all data inside msg that is not a valid JSON data type will be dropped from it permanently</p>
+    <p><pre>THIS IS NOT READY FOR PRODUCTION YET!</pre></p>
+
+    <h2>Usage</h2>
+    <p>A function block where you can write code to do more interesting things.</p>
+    <p>The message is passed in as a Python dictionary called <code>msg</code>.</p>
+    <p>By convention it will have a <code>msg['payload']</code> key containing
+       the body of the message.</p>
+    <h4>Logging and Error Handling</h4>
+    <p>To log any information, or report an error, the following functions are available:</p>
+        <ul>
+            <li><code>node.log("Log")</code></li>
+            <li><code>node.warn("Warning")</code></li>
+            <li><code>node.error("Error")</code></li>
+        </ul>
+    </p>
+    <p>The Catch node can also be used to handle errors. To invoke a Catch node,
+    pass <code>msg</code> as a second argument to <code>node.error</code>:</p>
+    <pre>node.error("Error msg", msg)</pre>
+    <h4>Sending messages</h4>
+    <p>The function can either return the messages it wants to pass on to the next nodes
+    in the flow, or can call <code>node.send(messages)</code>.</p>
+    <p>It can return/send:</p>
+    <ul>
+      <li>a single message dictionary - passed to nodes connected to the first output</li>
+      <li>a list of message dictionaries - passed to nodes connected to the corresponding outputs</li>
+    </ul>
+    <p>If any element of the list is itself a list of messages, multiple
+          messages are sent to the corresponding output.</p>
+    <p>If null is returned, either by itself or as an element of the list, no
+          message is passed on.</p>
+    <p>See the <a target="_new" href="http://nodered.org/docs/writing-functions.html">online documentation</a> for more help.</p>
+
+</script>
