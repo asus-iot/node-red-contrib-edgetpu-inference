@@ -11,11 +11,18 @@
   "node-red": {
     "nodes": {
       "object-detection": "lib/object-detection.js",
-      "image-classification": "lib/image-classification.js"
+      "image-classification": "lib/image-classification.js",
+      "ui_performance": "lib/ui_performance.js",
+      "ui_result": "lib/ui_result.js"
     }
   },
   "directories": {
     "lib": "lib"
+  },
+  "dependencies": {
+    "glob": "^7.0.0",
+    "interpret": "^1.0.0",
+    "rechoir": "^0.6.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
