@@ -11,12 +11,12 @@
         "type": "function",
         "z": "b5cf4e81.1b595",
         "name": "Video_city",
-        "func": "msg.payload=\"/home/asus/Downloads/test.mp4\"\nreturn msg;",
+        "func": "\nmsg.payload=\"./node_modules/node-red-contrib-edge-tpu/test_data/test.mp4\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 310,
+        "x": 330,
         "y": 460,
         "wires": [
             [
@@ -26,84 +26,26 @@
         "icon": "font-awesome/fa-file-video-o"
     },
     {
-        "id": "55857370.df40ec",
-        "type": "inject",
-        "z": "b5cf4e81.1b595",
-        "name": "Start stream",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
-        "y": 460,
-        "wires": [
-            [
-                "d7abc15d.9c02b"
-            ]
-        ]
-    },
-    {
         "id": "2013f5c5.9da0ea",
         "type": "SZ Object Detection",
         "z": "b5cf4e81.1b595",
         "name": "",
         "intype": "2",
         "tputype": "0",
-        "tpunum": "1",
-        "modelpath": "/home/asus/Desktop/edgetpu/test_data/ssd_mobilenet_v1_coco_quant_postprocess_edgetpu.tflite",
-        "labelpath": "/home/asus/Desktop/edgetpu/test_data/coco_labels.txt",
+        "tpunum": "0",
+        "modelpath": "./node_modules/node-red-contrib-edge-tpu/test_data/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite",
+        "labelpath": "./node_modules/node-red-contrib-edge-tpu/test_data/coco_labels.txt",
         "threshold": "0.5",
         "topk": "5",
         "keepratio": "0",
         "relativecoord": "0",
         "resample": "0",
         "outimage": true,
-        "x": 520,
+        "x": 540,
         "y": 460,
         "wires": [
             [
                 "9f0aa671.73e948"
-            ]
-        ]
-    },
-    {
-        "id": "d4d2ff52.326cd",
-        "type": "inject",
-        "z": "b5cf4e81.1b595",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 110,
-        "y": 320,
-        "wires": [
-            [
-                "da450bda.80ee18"
             ]
         ]
     },
@@ -118,7 +60,7 @@
         "resolution": "1",
         "width": "0",
         "height": "0",
-        "x": 750,
+        "x": 770,
         "y": 460,
         "wires": []
     },
@@ -132,14 +74,65 @@
         "order": 0,
         "width": 0,
         "height": 0,
-        "x": 330,
+        "x": 550,
         "y": 320,
         "wires": []
     },
     {
+        "id": "776e989a.6a90f8",
+        "type": "ui_button",
+        "z": "b5cf4e81.1b595",
+        "name": "StartDemo",
+        "group": "cd8d5087.f050d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "StartDemo",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 150,
+        "y": 380,
+        "wires": [
+            [
+                "d7abc15d.9c02b",
+                "afa795d8.c51978"
+            ]
+        ]
+    },
+    {
+        "id": "afa795d8.c51978",
+        "type": "trigger",
+        "z": "b5cf4e81.1b595",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 350,
+        "y": 320,
+        "wires": [
+            [
+                "da450bda.80ee18"
+            ]
+        ]
+    },
+    {
         "id": "cd8d5087.f050d",
         "type": "ui_group",
-        "z": "",
         "name": "Default",
         "tab": "36b75a6f.51b2c6",
         "order": 2,
@@ -150,7 +143,6 @@
     {
         "id": "79ffb604.012868",
         "type": "ui_group",
-        "z": "",
         "name": "Default1",
         "tab": "36b75a6f.51b2c6",
         "order": 3,
@@ -161,7 +153,6 @@
     {
         "id": "36b75a6f.51b2c6",
         "type": "ui_tab",
-        "z": "",
         "name": "List",
         "icon": "dashboard"
     }

@@ -52,20 +52,8 @@ sudo ufw allow 1880
 # Install inference node
 sudo apt-get install -y python3-opencv
 sudo apt-get install -y python3-edgetpu
-npm install --prefix ~/.node-red ../node-red-contrib-edge-tpu
-
-# Get TF Lite model and labels
-MODEL_DIR="${SCRIPT_DIR}/models"
-mkdir -p "${MODEL_DIR}"
-(cd "${MODEL_DIR}"
-curl -OL "${TEST_DATA_URL}/mobilenet_ssd_v2_coco_quant_postprocess_edgetpu.tflite" \
-     -OL "${TEST_DATA_URL}/mobilenet_ssd_v2_coco_quant_postprocess.tflite" \
-     -OL "${TEST_DATA_URL}/coco_labels.txt")
-
-(cd "${MODEL_DIR}" && \
-curl -OL "${TEST_DATA_URL}/inception_v4_299_quant_edgetpu.tflite" \
-     -OL "${TEST_DATA_URL}/inception_v4_299_quant.tflite" \
-     -OL "${TEST_DATA_URL}/imagenet_labels.txt")
+npm install --prefix=~/.node-red node-red-dashboard
+npm install --prefix=~/.node-red ../node-red-contrib-edge-tpu
 
 echo "Enter the y/Y to reboot system for the TPU driver work normally and n/N to reboot system later:[y/n]"
 while read -r -n1 key
@@ -73,7 +61,7 @@ do
         if [ $key = "y" ] || [ $key = "Y" ] ; then
 		echo ""
                 echo "Reboot System"
-		#sudo reboot
+		sudo reboot
                 break
         else
                 echo "Not reboot"
