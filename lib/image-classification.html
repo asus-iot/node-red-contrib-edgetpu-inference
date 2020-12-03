@@ -17,7 +17,8 @@
             threshold: {value: "0.1", required:true},
 	    topk: {value: "3", required:true},
 	    resample: {value: "0", required: true},
-	    outimage: {value: 'true'}
+	    outimage: {value: 'true'},
+	    loop: {value: 'loop'},
         },
         inputs: 1,
         outputs: 1,
@@ -148,11 +149,15 @@
         </select>
     </div>
     <!-- API Parameters -->
-    <div class="form=row">
-	<label for="node-input-image"><i class="fa fa-picture-o"></i> Output Image</label>
-	<input type="checkbox" id="node-input-outimage" style="width:2%; transform: scale(1.9); margin-left: 1%; vertical-align: text-bottom;">
-</script>
+    <div class="form-row">
+        <label for="node-input-control"><i class="fa fa-recycle"></i> Control</label>
+        <label for="node-input-outimage" style="width:10%"> Output Image</label>
+        <input type="checkbox" id="node-input-outimage" style="width:14%; transform: scale(1.6); vertical-align: top;">
+        <label for="node-input-loop" style="width:10%; margin-left: 4%;"> Video Loop</label>
+        <input type="checkbox" id="node-input-loop" style="width:14%; transform: scale(1.6); vertical-align: top;">
     </div>
+
+</script>
 
 
 <script type="text/x-red" data-help-name="SZ Image Classification">
