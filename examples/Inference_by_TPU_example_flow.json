@@ -1,15 +1,15 @@
 [
     {
-        "id": "b5cf4e81.1b595",
+        "id": "484a4066.57495",
         "type": "tab",
         "label": "result flow",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "d7abc15d.9c02b",
+        "id": "b62b54bc.47f5b8",
         "type": "function",
-        "z": "b5cf4e81.1b595",
+        "z": "484a4066.57495",
         "name": "Video_city",
         "func": "\nmsg.payload=\"./node_modules/node-red-contrib-edge-tpu/test_data/test.mp4\"\nreturn msg;",
         "outputs": 1,
@@ -20,15 +20,15 @@
         "y": 460,
         "wires": [
             [
-                "2013f5c5.9da0ea"
+                "9ddba8c7.d7aa58"
             ]
         ],
         "icon": "font-awesome/fa-file-video-o"
     },
     {
-        "id": "2013f5c5.9da0ea",
+        "id": "9ddba8c7.d7aa58",
         "type": "SZ Object Detection",
-        "z": "b5cf4e81.1b595",
+        "z": "484a4066.57495",
         "name": "",
         "intype": "2",
         "tputype": "0",
@@ -41,49 +41,50 @@
         "relativecoord": "0",
         "resample": "0",
         "outimage": true,
+        "loop": false,
         "x": 540,
         "y": 460,
         "wires": [
             [
-                "9f0aa671.73e948"
+                "eb2c99f7.87bd78"
             ]
         ]
     },
     {
-        "id": "9f0aa671.73e948",
+        "id": "eb2c99f7.87bd78",
         "type": "ui_result",
-        "z": "b5cf4e81.1b595",
-        "group": "cd8d5087.f050d",
+        "z": "484a4066.57495",
+        "group": "365bb82b.fd8d18",
         "name": "",
         "title": "Label",
-        "order": 0,
+        "order": 1,
         "resolution": "1",
-        "width": "0",
-        "height": "0",
+        "width": "24",
+        "height": "18",
         "x": 770,
         "y": 460,
         "wires": []
     },
     {
-        "id": "da450bda.80ee18",
+        "id": "d3960755.7f39d8",
         "type": "ui_performance",
-        "z": "b5cf4e81.1b595",
-        "group": "79ffb604.012868",
+        "z": "484a4066.57495",
+        "group": "365bb82b.fd8d18",
         "name": "",
         "title": "",
-        "order": 0,
-        "width": 0,
-        "height": 0,
+        "order": 2,
+        "width": "11",
+        "height": "18",
         "x": 550,
         "y": 320,
         "wires": []
     },
     {
-        "id": "776e989a.6a90f8",
+        "id": "24bc2238.e885be",
         "type": "ui_button",
-        "z": "b5cf4e81.1b595",
+        "z": "484a4066.57495",
         "name": "StartDemo",
-        "group": "cd8d5087.f050d",
+        "group": "eebbd418.bc4f68",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -100,15 +101,15 @@
         "y": 380,
         "wires": [
             [
-                "d7abc15d.9c02b",
-                "afa795d8.c51978"
+                "b62b54bc.47f5b8",
+                "44161e7.d23cbe"
             ]
         ]
     },
     {
-        "id": "afa795d8.c51978",
+        "id": "44161e7.d23cbe",
         "type": "trigger",
-        "z": "b5cf4e81.1b595",
+        "z": "484a4066.57495",
         "name": "",
         "op1": "1",
         "op2": "0",
@@ -116,7 +117,6 @@
         "op2type": "str",
         "duration": "-1",
         "extend": false,
-        "overrideDelay": false,
         "units": "s",
         "reset": "",
         "bytopic": "all",
@@ -126,12 +126,23 @@
         "y": 320,
         "wires": [
             [
-                "da450bda.80ee18"
+                "d3960755.7f39d8"
             ]
         ]
     },
     {
-        "id": "cd8d5087.f050d",
+        "id": "365bb82b.fd8d18",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default1",
+        "tab": "36b75a6f.51b2c6",
+        "order": 3,
+        "disp": true,
+        "width": "35",
+        "collapse": false
+    },
+    {
+        "id": "eebbd418.bc4f68",
         "type": "ui_group",
         "name": "Default",
         "tab": "36b75a6f.51b2c6",
@@ -141,18 +152,9 @@
         "collapse": false
     },
     {
-        "id": "79ffb604.012868",
-        "type": "ui_group",
-        "name": "Default1",
-        "tab": "36b75a6f.51b2c6",
-        "order": 3,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
         "id": "36b75a6f.51b2c6",
         "type": "ui_tab",
+        "z": "",
         "name": "List",
         "icon": "dashboard"
     }
