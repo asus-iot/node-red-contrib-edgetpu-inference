@@ -41,7 +41,7 @@
         "relativecoord": "0",
         "resample": "0",
         "outimage": true,
-        "loop": false,
+        "loop": true,
         "x": 540,
         "y": 460,
         "wires": [
@@ -59,8 +59,8 @@
         "title": "Label",
         "order": 1,
         "resolution": "1",
-        "width": "24",
-        "height": "18",
+        "width": "21",
+        "height": "14",
         "x": 770,
         "y": 460,
         "wires": []
@@ -73,10 +73,10 @@
         "name": "",
         "title": "",
         "order": 2,
-        "width": "11",
-        "height": "18",
+        "width": "9",
+        "height": "14",
         "x": 550,
-        "y": 320,
+        "y": 300,
         "wires": []
     },
     {
@@ -84,7 +84,7 @@
         "type": "ui_button",
         "z": "484a4066.57495",
         "name": "StartDemo",
-        "group": "eebbd418.bc4f68",
+        "group": "365bb82b.fd8d18",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -138,17 +138,7 @@
         "tab": "36b75a6f.51b2c6",
         "order": 3,
         "disp": true,
-        "width": "35",
-        "collapse": false
-    },
-    {
-        "id": "eebbd418.bc4f68",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "36b75a6f.51b2c6",
-        "order": 2,
-        "disp": true,
-        "width": "27",
+        "width": "30",
         "collapse": false
     },
     {
