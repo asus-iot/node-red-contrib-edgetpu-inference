@@ -54,6 +54,7 @@ sudo apt-get install -y python3-opencv
 sudo apt-get install -y python3-edgetpu
 npm install --prefix=~/.node-red node-red-dashboard
 npm install --prefix=~/.node-red ../node-red-contrib-edge-tpu
+cp settings.js ~/.node-red
 
 echo "Enter the y/Y to reboot system for the TPU driver work normally and n/N to reboot system later:[y/n]"
 while read -r -n1 key
