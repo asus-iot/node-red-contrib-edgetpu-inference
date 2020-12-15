@@ -5,8 +5,8 @@
 <script type="text/javascript">
     
     RED.nodes.registerType('SZ Image Classification',{
-        category: 'Shen Zhou',
-        color: '#fdd0a2',
+        category: 'EdgeTPU Inference',
+        color: '#badee2',
         defaults: {
 	    name: {value: "", required:false},
 	    intype: {value: "0", required:true},
@@ -22,9 +22,10 @@
         },
         inputs: 1,
         outputs: 1,
-        icon: "function.png",
+        icon: "ic-AIOT.png",
+        paletteLabel: "Image Classification",
         label: function() {
-            return this.name || 'SZ-Image Classification';
+            return this.name || 'Image Classification';
         },
         oneditprepare: function() {
             $( "#node-input-outputs" ).spinner({

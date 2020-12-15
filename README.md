@@ -1,7 +1,7 @@
-node-red-contrib-edge-tpu v0.0.1
+node-red-contrib-edgetpu-inference v0.0.1
 -------
 
 Install
 -------
-npm install -g node-red-contrib-edge-tpu
+npm install --prefix=~/.node-red node-red-contrib-edge-tpu
 

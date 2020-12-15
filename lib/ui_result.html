@@ -49,8 +49,8 @@
 
 <script type="text/javascript">
     RED.nodes.registerType("ui_result", {
-        category: 'dashboard',
-        color: '#ffc0cb',
+        category: 'EdgeTPU Inference',
+        color: '#badee2',
         defaults: {
             // belonging dashboard group
             group: {type: 'ui_group', required:true},
@@ -71,9 +71,10 @@
         },
         inputs:1,
         outputs:0,
-        icon: "ui_result.png",
-        paletteLabel: "result",
-        label: function() { return this.name || "result"; },
+        icon: "ic-AIOT.png",
+        align: 'left',
+        paletteLabel: "Result",
+        label: function() { return this.name || "Result"; },
         oneditprepare: function() {
             // use elementSizer to input common widget parameters
             $("#node-input-size").elementSizer({

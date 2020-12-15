@@ -36,8 +36,8 @@
 
 <script type="text/javascript">
     RED.nodes.registerType("ui_performance", {
-        category: 'dashboard',
-        color: '#ffc0cb',
+        category: 'EdgeTPU Inference',
+        color: '#badee2',
         defaults: {
             // belonging dashboard group
             group: {type: 'ui_group', required:true},
@@ -57,8 +57,9 @@
         },
         inputs:1,
         outputs:0,
-        icon: "ui_performance.png",
-        paletteLabel: "performance",
+        icon: "ic-AIOT.png",
+        align: 'left',
+        paletteLabel: "Performance",
         label: function() { return this.name || "performance"; },
         oneditprepare: function() {
             // use elementSizer to input common widget parameters

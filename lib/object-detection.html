@@ -5,8 +5,8 @@
 <script type="text/javascript">
     
     RED.nodes.registerType('SZ Object Detection',{
-        category: 'Shen Zhou',
-        color: '#fdd0a2',
+        category: 'EdgeTPU Inference',
+        color: '#badee2',
         defaults: {
 	    name: {value: "", required:false},
 	    intype: {value: "0", required:true},
@@ -24,9 +24,10 @@
         },
         inputs: 1,
         outputs: 1,
-        icon: "function.png",
+        icon: "ic-AIOT.png",
+        paletteLabel: "Object Detection",
         label: function() {
-            return this.name || 'SZ-Object Detection';
+            return this.name || 'Object Detection';
         },
         oneditprepare: function() {
             $( "#node-input-outputs" ).spinner({
