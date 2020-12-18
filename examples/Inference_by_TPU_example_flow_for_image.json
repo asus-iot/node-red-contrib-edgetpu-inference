@@ -1,0 +1,149 @@
+[
+    {
+        "id": "8f8f4a1b.831918",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "600e1b4.61f2be4",
+        "type": "ui_button",
+        "z": "8f8f4a1b.831918",
+        "name": "StartDemo",
+        "group": "365bb82b.fd8d18",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "StartDemo",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 270,
+        "y": 340,
+        "wires": [
+            [
+                "38019bdc.ac8174",
+                "15c28539.85121b"
+            ]
+        ]
+    },
+    {
+        "id": "15c28539.85121b",
+        "type": "trigger",
+        "z": "8f8f4a1b.831918",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-1",
+        "extend": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 470,
+        "y": 280,
+        "wires": [
+            [
+                "c03135a8.268058"
+            ]
+        ]
+    },
+    {
+        "id": "c03135a8.268058",
+        "type": "ui_performance",
+        "z": "8f8f4a1b.831918",
+        "group": "365bb82b.fd8d18",
+        "name": "",
+        "title": "",
+        "order": 2,
+        "width": "9",
+        "height": "14",
+        "x": 650,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "38019bdc.ac8174",
+        "type": "function",
+        "z": "8f8f4a1b.831918",
+        "name": "Video_city",
+        "func": "\nmsg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/person.jpg\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 450,
+        "y": 420,
+        "wires": [
+            [
+                "9f4522cf.4c9c2"
+            ]
+        ],
+        "icon": "font-awesome/fa-file-video-o"
+    },
+    {
+        "id": "9f4522cf.4c9c2",
+        "type": "SZ Image Classification",
+        "z": "8f8f4a1b.831918",
+        "name": "",
+        "intype": "3",
+        "tputype": "0",
+        "tpunum": "2",
+        "modelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/inception_v4_299_quant.tflite",
+        "labelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/imagenet_labels.txt",
+        "threshold": "0.1",
+        "topk": "3",
+        "resample": "0",
+        "outimage": true,
+        "loop": false,
+        "x": 660,
+        "y": 420,
+        "wires": [
+            [
+                "426f1bcb.157394"
+            ]
+        ]
+    },
+    {
+        "id": "426f1bcb.157394",
+        "type": "ui_result",
+        "z": "8f8f4a1b.831918",
+        "group": "365bb82b.fd8d18",
+        "name": "",
+        "title": "Label",
+        "order": 1,
+        "resolution": "1",
+        "width": "21",
+        "height": "14",
+        "x": 850,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "365bb82b.fd8d18",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default1",
+        "tab": "36b75a6f.51b2c6",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "36b75a6f.51b2c6",
+        "type": "ui_tab",
+        "z": "",
+        "name": "List",
+        "icon": "dashboard"
+    }
+]
