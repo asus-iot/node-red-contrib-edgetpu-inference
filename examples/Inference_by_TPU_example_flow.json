@@ -10,7 +10,7 @@
         "id": "b62b54bc.47f5b8",
         "type": "function",
         "z": "484a4066.57495",
-        "name": "Video_city",
+        "name": "Video_AIOT",
         "func": "\nmsg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/test.mp4\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,

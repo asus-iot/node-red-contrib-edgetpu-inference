@@ -75,7 +75,7 @@
         "id": "38019bdc.ac8174",
         "type": "function",
         "z": "8f8f4a1b.831918",
-        "name": "Video_city",
+        "name": "Image_person",
         "func": "\nmsg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/person.jpg\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
