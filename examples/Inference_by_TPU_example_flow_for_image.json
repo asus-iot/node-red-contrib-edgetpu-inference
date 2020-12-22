@@ -2,7 +2,7 @@
     {
         "id": "8f8f4a1b.831918",
         "type": "tab",
-        "label": "Flow 2",
+        "label": "Image-Classification Demo",
         "disabled": false,
         "info": ""
     },
@@ -132,7 +132,7 @@
         "id": "365bb82b.fd8d18",
         "type": "ui_group",
         "z": "",
-        "name": "Default1",
+        "name": "Image-Classification Demo",
         "tab": "36b75a6f.51b2c6",
         "order": 3,
         "disp": true,
@@ -143,7 +143,7 @@
         "id": "36b75a6f.51b2c6",
         "type": "ui_tab",
         "z": "",
-        "name": "List",
+        "name": "Image-Classification_Demo",
         "icon": "dashboard"
     }
 ]

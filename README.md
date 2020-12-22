@@ -1,7 +1,7 @@
-node-red-contrib-edgetpu-inference v0.0.1
+node-red-contrib-edgetpu-inference v1.0.0
 -------
 
 Install
 -------
-npm install --prefix=~/.node-red node-red-contrib-edge-tpu
+npm install --prefix=~/.node-red node-red-contrib-edgetpu-inference
 
