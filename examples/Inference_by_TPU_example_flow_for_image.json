@@ -2,7 +2,7 @@
     {
         "id": "8f8f4a1b.831918",
         "type": "tab",
-        "label": "Image-Classification Demo",
+        "label": "ASUS IoT Image Classification",
         "disabled": false,
         "info": ""
     },
@@ -132,7 +132,7 @@
         "id": "365bb82b.fd8d18",
         "type": "ui_group",
         "z": "",
-        "name": "Image-Classification Demo",
+        "name": "EdgeTPU Demonstration",
         "tab": "36b75a6f.51b2c6",
         "order": 3,
         "disp": true,
@@ -143,7 +143,7 @@
         "id": "36b75a6f.51b2c6",
         "type": "ui_tab",
         "z": "",
-        "name": "Image-Classification_Demo",
+        "name": "ASUS IoT Image Classification",
         "icon": "dashboard"
     }
 ]
