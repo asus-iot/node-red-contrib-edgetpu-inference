@@ -37,8 +37,10 @@ sudo apt-get install -y python3-dev
 # Install just the TensorFlow Lite interpreter
 python3_version=$(python3 --version | awk '{ print $2}' | awk -F '.' '{ print $1$2}')
 echo "Python3 version: "$(python3 --version)
-if [ $python3_version = "36" ] || [ $python3_version = "37" ] || [ $python3_version = "38" ] ; then
+if [ $python3_version = "36" ] || [ $python3_version = "37" ] || [ $python3_version = "35" ] ; then
         sudo pip3 install  "https://github.com/google-coral/pycoral/releases/download/release-frogfish/tflite_runtime-2.5.0-cp"$python3_version"-cp"$python3_version"m-linux_x86_64.whl"
+elif [ $python3_version = "38" ] ; then
+        sudo pip3 install  "https://github.com/google-coral/pycoral/releases/download/release-frogfish/tflite_runtime-2.5.0-cp"$python3_version"-cp"$python3_version"-linux_x86_64.whl"
 else
 	echo "Python version"$(python3 --version)"not support the TensorFlow Lite interpreter"
 	exit 0
