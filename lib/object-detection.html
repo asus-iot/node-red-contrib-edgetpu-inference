@@ -21,6 +21,9 @@
 	    resample: {value: "0", required: true},
 	    outimage: {value: 'true'},
             loop: {value: 'false'},
+	    speed: {value: 'false'},
+	    parselabel: {required: false},
+	    downscale: {required: false},
         },
         inputs: 1,
         outputs: 1,
@@ -30,6 +33,17 @@
             return this.name || 'Object Detection';
         },
         oneditprepare: function() {
+	    if($("#node-input-speed").is(":checked"))
+	    {
+		$(".speedup").hide();
+		$(".speedup2").show();
+		$("#node-input-parselabel").prop('required', true);
+	    }
+	    else
+            {
+		$(".speedup").hide();
+		$(".speedup2").hide();
+	    }
             $( "#node-input-outputs" ).spinner({
                 min:1
             });
@@ -168,10 +182,39 @@
     <!-- API Parameters -->
     <div class="form-row">
         <label for="node-input-control"><i class="fa fa-recycle"></i> Control</label>
-        <label for="node-input-outimage" style="width:10%"> Output Image</label>
-        <input type="checkbox" id="node-input-outimage" style="width:14%; transform: scale(1.6); vertical-align: top;">
-        <label for="node-input-loop" style="width:10%; margin-left: 4%;"> Video Loop</label>
-        <input type="checkbox" id="node-input-loop" style="width:14%; transform: scale(1.6); vertical-align: top;">
+	<div class="checklist">
+            <input type="checkbox" id="node-input-outimage" title="Output Image", data-value="Output Image">
+	    <label for="node-input-outimage" title="Output Image"> Output Image</label>
+            <input type="checkbox" id="node-input-loop" title="Video Loop", data-value="Video Loop">
+	    <label for="node-input-loop" title="Video Loop"> Video Loop</label>
+            <input type="checkbox" id="node-input-speed" title="Speed Up", data-value="Speed Up">
+	    <label for="node-input-speed" title="Speed Up"> Parse Particular Label</label>
+	    <div class="form-row speedup">
+	         <label for="node-input-downscale"> Downscale(%)</label>
+                 <input type="text" id="node-input-downscale" placeholder="50" style="width: 50%;margin-left: 10px" />
+	    </div>
+	    <div class="form-row speedup2">
+	         <label for="node-input-parselabel"> Label Name</label>
+                 <input type="text" id="node-input-parselabel" placeholder="Person" style="width: 50%;margin-left: 10px" />
+                 </div>
+	    </div>
+            <script>
+	 	 $("#node-input-speed").change(function()
+		 {
+			if($("#node-input-speed").is(":checked"))
+  		        {
+                		$(".speedup").hide();
+		                $(".speedup2").show();
+				$("#node-input-parselabel").prop('required', true);
+            		}
+		        else
+		        {
+                		$(".speedup").hide();
+		                $(".speedup2").hide();
+		        }
+		 });
+	    </script>
+	</div>
     </div>
 
 </script>
