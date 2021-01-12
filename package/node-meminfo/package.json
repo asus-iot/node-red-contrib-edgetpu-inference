@@ -1,0 +1,67 @@
+{
+  "_from": "node-meminfo",
+  "_id": "node-meminfo@1.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-+FjkFGzDdfShO7loiHdphcjpEO8qw01c0y4I52gr8QP4PiP2IznEDbjy/itBbVj28Xc57q7EZYoqHZevskARmw==",
+  "_location": "/node-meminfo",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "node-meminfo",
+    "name": "node-meminfo",
+    "escapedName": "node-meminfo",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/node-meminfo/-/node-meminfo-1.0.1.tgz",
+  "_shasum": "06da96dc170a2b5993f428dd5b17e352dcc5abae",
+  "_spec": "node-meminfo",
+  "_where": "/home/asus/.node-red",
+  "author": {
+    "name": "Magic Len",
+    "email": "len@magiclen.org",
+    "url": "https://magiclen.org"
+  },
+  "bugs": {
+    "url": "https://github.com/magiclen/node-meminfo/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "bindings": "^1.3.0"
+  },
+  "deprecated": false,
+  "description": "Get memory information on Linux.",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.5",
+    "mocha-logger": "^1.0.5"
+  },
+  "engines": {
+    "node": ">=8.6.0"
+  },
+  "gypfile": true,
+  "homepage": "https://github.com/magiclen/node-meminfo#readme",
+  "keywords": [
+    "nodejs",
+    "meminfo"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "node-meminfo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magiclen/node-meminfo.git"
+  },
+  "scripts": {
+    "install": "node-gyp rebuild",
+    "test": "mocha --reporter spec"
+  },
+  "typings": "index.d.ts",
+  "version": "1.0.1"
+}

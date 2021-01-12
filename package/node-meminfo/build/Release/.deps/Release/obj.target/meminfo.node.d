@@ -1,0 +1,1 @@
+cmd_Release/obj.target/meminfo.node := g++ -shared -pthread -rdynamic -m64  -Wl,-soname=meminfo.node -o Release/obj.target/meminfo.node -Wl,--start-group Release/obj.target/meminfo/src/meminfo.o -Wl,--end-group 
