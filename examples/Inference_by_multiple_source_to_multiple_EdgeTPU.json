@@ -1,0 +1,751 @@
+[
+    {
+        "id": "1f57e4f4.2ee2e3",
+        "type": "tab",
+        "label": "ASUS IoT Multiple EdgeTPU",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3f005fb2.e53548",
+        "type": "SZ Object Detection",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "EdgeTPU 0",
+        "intype": "2",
+        "tputype": "0",
+        "tpunum": "0",
+        "modelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite",
+        "labelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/coco_labels.txt",
+        "threshold": "0.5",
+        "topk": "5",
+        "keepratio": "0",
+        "relativecoord": "0",
+        "resample": "0",
+        "outimage": true,
+        "loop": true,
+        "speed": true,
+        "parselabel": "Person",
+        "downscale": "",
+        "x": 450,
+        "y": 180,
+        "wires": [
+            [
+                "92eb2ed.00487d"
+            ]
+        ]
+    },
+    {
+        "id": "92eb2ed.00487d",
+        "type": "function",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "Convert image to payload",
+        "func": "if (msg.image === undefined)\n    return 0;\nmsg.payload=msg.image;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 670,
+        "y": 180,
+        "wires": [
+            [
+                "84f468b6.15d64"
+            ]
+        ]
+    },
+    {
+        "id": "89666b31.8e98d8",
+        "type": "inject",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "Start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 180,
+        "wires": [
+            [
+                "59da59ac.f0ad18",
+                "4e6539f4.cedc9",
+                "8e1ba5e8.8379c8",
+                "8c064fec.40d3d",
+                "2f5756d8.c1b5aa",
+                "9104c393.c99138",
+                "1562f0c0.4420c7",
+                "cde4db5c.751d98"
+            ]
+        ]
+    },
+    {
+        "id": "b25e8b2a.a0f23",
+        "type": "function",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "Convert image to payload",
+        "func": "if (msg.image === undefined)\n    return 0;\nmsg.payload=msg.image;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 670,
+        "y": 240,
+        "wires": [
+            [
+                "437e2757.ca349"
+            ]
+        ]
+    },
+    {
+        "id": "31df748d.d54484",
+        "type": "function",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "Convert image to payload",
+        "func": "if (msg.image === undefined)\n    return 0;\nmsg.payload=msg.image;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 670,
+        "y": 300,
+        "wires": [
+            [
+                "f60fe8e8.9c5898"
+            ]
+        ]
+    },
+    {
+        "id": "94efff8c.3ec968",
+        "type": "function",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "Convert image to payload",
+        "func": "if (msg.image === undefined)\n    return 0;\nmsg.payload=msg.image;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 670,
+        "y": 360,
+        "wires": [
+            [
+                "571db7e1.6a1d"
+            ]
+        ]
+    },
+    {
+        "id": "6ff998d5.a03818",
+        "type": "function",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "Convert image to payload",
+        "func": "if (msg.image === undefined)\n    return 0;\nmsg.payload=msg.image;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 670,
+        "y": 420,
+        "wires": [
+            [
+                "8b02c6a7.e612f"
+            ]
+        ]
+    },
+    {
+        "id": "c403134.fd0c5f",
+        "type": "function",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "Convert image to payload",
+        "func": "if (msg.image === undefined)\n    return 0;\nmsg.payload=msg.image;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 670,
+        "y": 480,
+        "wires": [
+            [
+                "62f85002.786dd8"
+            ]
+        ]
+    },
+    {
+        "id": "b47107cb.1dbce",
+        "type": "function",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "Convert image to payload",
+        "func": "if (msg.image === undefined)\n    return 0;\nmsg.payload=msg.image;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 670,
+        "y": 540,
+        "wires": [
+            [
+                "abec7ee4.0f0b38"
+            ]
+        ]
+    },
+    {
+        "id": "5da58ec6.090e88",
+        "type": "function",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "Convert image to payload",
+        "func": "if (msg.image === undefined)\n    return 0;\nmsg.payload=msg.image;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 670,
+        "y": 600,
+        "wires": [
+            [
+                "49bfd73d.52edf"
+            ]
+        ]
+    },
+    {
+        "id": "4e6539f4.cedc9",
+        "type": "function",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "Video_1",
+        "func": "msg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/v1.mp4\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 260,
+        "y": 180,
+        "wires": [
+            [
+                "3f005fb2.e53548"
+            ]
+        ],
+        "icon": "font-awesome/fa-file-video-o"
+    },
+    {
+        "id": "84f468b6.15d64",
+        "type": "image viewer",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "",
+        "width": "200",
+        "data": "payload",
+        "dataType": "msg",
+        "x": 910,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "437e2757.ca349",
+        "type": "image viewer",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "",
+        "width": "200",
+        "data": "payload",
+        "dataType": "msg",
+        "x": 1150,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f60fe8e8.9c5898",
+        "type": "image viewer",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "",
+        "width": "200",
+        "data": "payload",
+        "dataType": "msg",
+        "x": 1370,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "571db7e1.6a1d",
+        "type": "image viewer",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "",
+        "width": "200",
+        "data": "payload",
+        "dataType": "msg",
+        "x": 910,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8b02c6a7.e612f",
+        "type": "image viewer",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "",
+        "width": "200",
+        "data": "payload",
+        "dataType": "msg",
+        "x": 1150,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "62f85002.786dd8",
+        "type": "image viewer",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "",
+        "width": "200",
+        "data": "payload",
+        "dataType": "msg",
+        "x": 1370,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "abec7ee4.0f0b38",
+        "type": "image viewer",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "",
+        "width": "200",
+        "data": "payload",
+        "dataType": "msg",
+        "x": 910,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "49bfd73d.52edf",
+        "type": "image viewer",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "",
+        "width": "200",
+        "data": "payload",
+        "dataType": "msg",
+        "x": 1150,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "46c82e4.09c40d",
+        "type": "inject",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "STOP",
+        "payloadType": "str",
+        "x": 90,
+        "y": 320,
+        "wires": [
+            [
+                "3f005fb2.e53548",
+                "b2ef687b.bcd2f",
+                "aa22851f.6e24c",
+                "745142cd.be9a24",
+                "39d34cfa.88fa84",
+                "5fce0d8e.5ea63c",
+                "6a54a677.3f9ac",
+                "42ed2d55.3da664"
+            ]
+        ]
+    },
+    {
+        "id": "f27be623.3656d8",
+        "type": "function",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "",
+        "func": "const ttt=\"HELLO\\nworld\"\nnode.status({ fill: \"green\", shape: \"dot\", text: \"5\"});\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 500,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "91ce07b5.0dc4f8",
+        "type": "inject",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 259,
+        "y": 1467,
+        "wires": [
+            [
+                "f27be623.3656d8"
+            ]
+        ]
+    },
+    {
+        "id": "8e1ba5e8.8379c8",
+        "type": "function",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "Video_2",
+        "func": "msg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/v2.mp4\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 260,
+        "y": 240,
+        "wires": [
+            [
+                "b2ef687b.bcd2f"
+            ]
+        ],
+        "icon": "font-awesome/fa-file-video-o"
+    },
+    {
+        "id": "8c064fec.40d3d",
+        "type": "function",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "Video_3",
+        "func": "msg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/v3.mp4\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 260,
+        "y": 300,
+        "wires": [
+            [
+                "42ed2d55.3da664"
+            ]
+        ],
+        "icon": "font-awesome/fa-file-video-o"
+    },
+    {
+        "id": "2f5756d8.c1b5aa",
+        "type": "function",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "Video_4",
+        "func": "msg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/v4.mp4\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 260,
+        "y": 360,
+        "wires": [
+            [
+                "aa22851f.6e24c"
+            ]
+        ],
+        "icon": "font-awesome/fa-file-video-o"
+    },
+    {
+        "id": "9104c393.c99138",
+        "type": "function",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "Video_5",
+        "func": "msg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/v5.mp4\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 260,
+        "y": 420,
+        "wires": [
+            [
+                "745142cd.be9a24"
+            ]
+        ],
+        "icon": "font-awesome/fa-file-video-o"
+    },
+    {
+        "id": "1562f0c0.4420c7",
+        "type": "function",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "Video_6",
+        "func": "msg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/v6.mp4\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 260,
+        "y": 480,
+        "wires": [
+            [
+                "39d34cfa.88fa84"
+            ]
+        ],
+        "icon": "font-awesome/fa-file-video-o"
+    },
+    {
+        "id": "cde4db5c.751d98",
+        "type": "function",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "Video_7",
+        "func": "msg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/v7.mp4\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 260,
+        "y": 540,
+        "wires": [
+            [
+                "5fce0d8e.5ea63c"
+            ]
+        ],
+        "icon": "font-awesome/fa-file-video-o"
+    },
+    {
+        "id": "59da59ac.f0ad18",
+        "type": "function",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "Video_8",
+        "func": "msg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/v8.mp4\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 260,
+        "y": 600,
+        "wires": [
+            [
+                "6a54a677.3f9ac"
+            ]
+        ],
+        "icon": "font-awesome/fa-file-video-o"
+    },
+    {
+        "id": "b2ef687b.bcd2f",
+        "type": "SZ Object Detection",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "EdgeTPU 1",
+        "intype": "2",
+        "tputype": "0",
+        "tpunum": "1",
+        "modelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite",
+        "labelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/coco_labels.txt",
+        "threshold": "0.5",
+        "topk": "5",
+        "keepratio": "0",
+        "relativecoord": "0",
+        "resample": "0",
+        "outimage": true,
+        "loop": true,
+        "speed": true,
+        "parselabel": "Person",
+        "x": 450,
+        "y": 240,
+        "wires": [
+            [
+                "b25e8b2a.a0f23"
+            ]
+        ]
+    },
+    {
+        "id": "aa22851f.6e24c",
+        "type": "SZ Object Detection",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "EdgeTPU 3",
+        "intype": "2",
+        "tputype": "0",
+        "tpunum": "3",
+        "modelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite",
+        "labelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/coco_labels.txt",
+        "threshold": "0.5",
+        "topk": "5",
+        "keepratio": "0",
+        "relativecoord": "0",
+        "resample": "0",
+        "outimage": true,
+        "loop": true,
+        "speed": true,
+        "parselabel": "Person",
+        "x": 450,
+        "y": 360,
+        "wires": [
+            [
+                "94efff8c.3ec968"
+            ]
+        ]
+    },
+    {
+        "id": "745142cd.be9a24",
+        "type": "SZ Object Detection",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "EdgeTPU 4",
+        "intype": "2",
+        "tputype": "0",
+        "tpunum": "4",
+        "modelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite",
+        "labelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/coco_labels.txt",
+        "threshold": "0.5",
+        "topk": "5",
+        "keepratio": "0",
+        "relativecoord": "0",
+        "resample": "0",
+        "outimage": true,
+        "loop": true,
+        "speed": true,
+        "parselabel": "Person",
+        "x": 450,
+        "y": 420,
+        "wires": [
+            [
+                "6ff998d5.a03818"
+            ]
+        ]
+    },
+    {
+        "id": "39d34cfa.88fa84",
+        "type": "SZ Object Detection",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "EdgeTPU 5",
+        "intype": "2",
+        "tputype": "0",
+        "tpunum": "5",
+        "modelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite",
+        "labelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/coco_labels.txt",
+        "threshold": "0.5",
+        "topk": "5",
+        "keepratio": "0",
+        "relativecoord": "0",
+        "resample": "0",
+        "outimage": true,
+        "loop": true,
+        "speed": true,
+        "parselabel": "Person",
+        "x": 450,
+        "y": 480,
+        "wires": [
+            [
+                "c403134.fd0c5f"
+            ]
+        ]
+    },
+    {
+        "id": "5fce0d8e.5ea63c",
+        "type": "SZ Object Detection",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "EdgeTPU 6",
+        "intype": "2",
+        "tputype": "0",
+        "tpunum": "6",
+        "modelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite",
+        "labelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/coco_labels.txt",
+        "threshold": "0.5",
+        "topk": "5",
+        "keepratio": "0",
+        "relativecoord": "0",
+        "resample": "0",
+        "outimage": true,
+        "loop": true,
+        "speed": true,
+        "parselabel": "Person",
+        "x": 450,
+        "y": 540,
+        "wires": [
+            [
+                "b47107cb.1dbce"
+            ]
+        ]
+    },
+    {
+        "id": "6a54a677.3f9ac",
+        "type": "SZ Object Detection",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "EdgeTPU 7",
+        "intype": "2",
+        "tputype": "0",
+        "tpunum": "7",
+        "modelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite",
+        "labelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/coco_labels.txt",
+        "threshold": "0.5",
+        "topk": "5",
+        "keepratio": "0",
+        "relativecoord": "0",
+        "resample": "0",
+        "outimage": true,
+        "loop": true,
+        "speed": true,
+        "parselabel": "Person",
+        "x": 450,
+        "y": 600,
+        "wires": [
+            [
+                "5da58ec6.090e88"
+            ]
+        ]
+    },
+    {
+        "id": "42ed2d55.3da664",
+        "type": "SZ Object Detection",
+        "z": "1f57e4f4.2ee2e3",
+        "name": "EdgeTPU 2",
+        "intype": "2",
+        "tputype": "0",
+        "tpunum": "2",
+        "modelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite",
+        "labelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/coco_labels.txt",
+        "threshold": "0.5",
+        "topk": "5",
+        "keepratio": "0",
+        "relativecoord": "0",
+        "resample": "0",
+        "outimage": true,
+        "loop": true,
+        "speed": true,
+        "parselabel": "Person",
+        "x": 450,
+        "y": 300,
+        "wires": [
+            [
+                "31df748d.d54484"
+            ]
+        ]
+    }
+]

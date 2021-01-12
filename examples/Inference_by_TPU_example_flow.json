@@ -1,34 +1,34 @@
 [
     {
-        "id": "484a4066.57495",
+        "id": "9cce51b5.110628",
         "type": "tab",
         "label": "ASUS IoT Object Detection",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "b62b54bc.47f5b8",
+        "id": "4946986c.68d9d",
         "type": "function",
-        "z": "484a4066.57495",
+        "z": "9cce51b5.110628",
         "name": "Video_AIOT",
         "func": "\nmsg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/test.mp4\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 330,
+        "x": 350,
         "y": 460,
         "wires": [
             [
-                "9ddba8c7.d7aa58"
+                "71d18a67.47026c"
             ]
         ],
         "icon": "font-awesome/fa-file-video-o"
     },
     {
-        "id": "9ddba8c7.d7aa58",
+        "id": "71d18a67.47026c",
         "type": "SZ Object Detection",
-        "z": "484a4066.57495",
+        "z": "9cce51b5.110628",
         "name": "",
         "intype": "2",
         "tputype": "0",
@@ -42,49 +42,52 @@
         "resample": "0",
         "outimage": true,
         "loop": true,
-        "x": 540,
+        "speed": false,
+        "parselabel": "",
+        "downscale": "",
+        "x": 560,
         "y": 460,
         "wires": [
             [
-                "eb2c99f7.87bd78"
+                "5021e005.71742"
             ]
         ]
     },
     {
-        "id": "eb2c99f7.87bd78",
+        "id": "5021e005.71742",
         "type": "ui_result",
-        "z": "484a4066.57495",
-        "group": "365bb82b.fd8d18",
+        "z": "9cce51b5.110628",
+        "group": "b45c4059.3e909",
         "name": "",
         "title": "Label",
         "order": 1,
         "resolution": "1",
         "width": "21",
         "height": "14",
-        "x": 770,
+        "x": 750,
         "y": 460,
         "wires": []
     },
     {
-        "id": "d3960755.7f39d8",
+        "id": "ca6133b2.990438",
         "type": "ui_performance",
-        "z": "484a4066.57495",
-        "group": "365bb82b.fd8d18",
+        "z": "9cce51b5.110628",
+        "group": "b45c4059.3e909",
         "name": "",
         "title": "",
         "order": 2,
         "width": "9",
         "height": "14",
         "x": 550,
-        "y": 300,
+        "y": 320,
         "wires": []
     },
     {
-        "id": "24bc2238.e885be",
+        "id": "7b4109fe.345ce",
         "type": "ui_button",
-        "z": "484a4066.57495",
+        "z": "9cce51b5.110628",
         "name": "StartDemo",
-        "group": "365bb82b.fd8d18",
+        "group": "b45c4059.3e909",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -101,15 +104,15 @@
         "y": 380,
         "wires": [
             [
-                "b62b54bc.47f5b8",
-                "44161e7.d23cbe"
+                "4946986c.68d9d",
+                "c94e497a.6a5958"
             ]
         ]
     },
     {
-        "id": "44161e7.d23cbe",
+        "id": "c94e497a.6a5958",
         "type": "trigger",
-        "z": "484a4066.57495",
+        "z": "9cce51b5.110628",
         "name": "",
         "op1": "1",
         "op2": "0",
@@ -126,23 +129,23 @@
         "y": 320,
         "wires": [
             [
-                "d3960755.7f39d8"
+                "ca6133b2.990438"
             ]
         ]
     },
     {
-        "id": "365bb82b.fd8d18",
+        "id": "b45c4059.3e909",
         "type": "ui_group",
         "z": "",
         "name": "EdgeTPU Demonstration",
-        "tab": "36b75a6f.51b2c6",
+        "tab": "e1376419.9b55f8",
         "order": 3,
         "disp": true,
         "width": "30",
         "collapse": false
     },
     {
-        "id": "36b75a6f.51b2c6",
+        "id": "e1376419.9b55f8",
         "type": "ui_tab",
         "z": "",
         "name": "ASUS IoT Object Detection",

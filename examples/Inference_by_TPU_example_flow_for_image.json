@@ -1,17 +1,17 @@
 [
     {
-        "id": "8f8f4a1b.831918",
+        "id": "7d1550d1.eae058",
         "type": "tab",
         "label": "ASUS IoT Image Classification",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "600e1b4.61f2be4",
+        "id": "5b700cfa.bb190c",
         "type": "ui_button",
-        "z": "8f8f4a1b.831918",
+        "z": "7d1550d1.eae058",
         "name": "StartDemo",
-        "group": "365bb82b.fd8d18",
+        "group": "71077c79.836974",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -28,15 +28,15 @@
         "y": 340,
         "wires": [
             [
-                "38019bdc.ac8174",
-                "15c28539.85121b"
+                "4d43a2e1.ff791c",
+                "56edb7ac.fc89a8"
             ]
         ]
     },
     {
-        "id": "15c28539.85121b",
+        "id": "56edb7ac.fc89a8",
         "type": "trigger",
-        "z": "8f8f4a1b.831918",
+        "z": "7d1550d1.eae058",
         "name": "",
         "op1": "1",
         "op2": "0",
@@ -53,47 +53,47 @@
         "y": 280,
         "wires": [
             [
-                "c03135a8.268058"
+                "7b98196d.211158"
             ]
         ]
     },
     {
-        "id": "c03135a8.268058",
+        "id": "7b98196d.211158",
         "type": "ui_performance",
-        "z": "8f8f4a1b.831918",
-        "group": "365bb82b.fd8d18",
+        "z": "7d1550d1.eae058",
+        "group": "71077c79.836974",
         "name": "",
         "title": "",
         "order": 2,
         "width": "9",
         "height": "14",
-        "x": 650,
+        "x": 670,
         "y": 280,
         "wires": []
     },
     {
-        "id": "38019bdc.ac8174",
+        "id": "4d43a2e1.ff791c",
         "type": "function",
-        "z": "8f8f4a1b.831918",
+        "z": "7d1550d1.eae058",
         "name": "Image_person",
         "func": "\nmsg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/person.jpg\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 450,
+        "x": 480,
         "y": 420,
         "wires": [
             [
-                "9f4522cf.4c9c2"
+                "7c7044b1.a6cfbc"
             ]
         ],
         "icon": "font-awesome/fa-file-video-o"
     },
     {
-        "id": "9f4522cf.4c9c2",
+        "id": "7c7044b1.a6cfbc",
         "type": "SZ Image Classification",
-        "z": "8f8f4a1b.831918",
+        "z": "7d1550d1.eae058",
         "name": "",
         "intype": "3",
         "tputype": "0",
@@ -105,42 +105,44 @@
         "resample": "0",
         "outimage": true,
         "loop": false,
-        "x": 660,
+        "speed": false,
+        "parselabel": "",
+        "x": 700,
         "y": 420,
         "wires": [
             [
-                "426f1bcb.157394"
+                "bbec3e75.9d035"
             ]
         ]
     },
     {
-        "id": "426f1bcb.157394",
+        "id": "bbec3e75.9d035",
         "type": "ui_result",
-        "z": "8f8f4a1b.831918",
-        "group": "365bb82b.fd8d18",
+        "z": "7d1550d1.eae058",
+        "group": "71077c79.836974",
         "name": "",
         "title": "Label",
         "order": 1,
         "resolution": "1",
         "width": "21",
         "height": "14",
-        "x": 850,
+        "x": 910,
         "y": 420,
         "wires": []
     },
     {
-        "id": "365bb82b.fd8d18",
+        "id": "71077c79.836974",
         "type": "ui_group",
         "z": "",
         "name": "EdgeTPU Demonstration",
-        "tab": "36b75a6f.51b2c6",
+        "tab": "8f28d64c.d16f38",
         "order": 3,
         "disp": true,
         "width": "30",
         "collapse": false
     },
     {
-        "id": "36b75a6f.51b2c6",
+        "id": "8f28d64c.d16f38",
         "type": "ui_tab",
         "z": "",
         "name": "ASUS IoT Image Classification",
