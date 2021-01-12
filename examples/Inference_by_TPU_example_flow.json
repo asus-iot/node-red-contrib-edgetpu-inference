@@ -1,15 +1,138 @@
 [
     {
-        "id": "9cce51b5.110628",
+        "id": "36aae840.ca6b58",
         "type": "tab",
         "label": "ASUS IoT Object Detection",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "4946986c.68d9d",
+        "id": "4f6e3f40.d00b9",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "a68527be.dd1368",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "a68527be.dd1368",
+        "type": "ui_tab",
+        "z": "",
+        "name": "ASUS IoT Object Detection",
+        "icon": "dashboard"
+    },
+    {
+        "id": "851eb905.2c9538",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#2e5ea8",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#2e5ea8",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#2e5ea8",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#5384d0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#2e5ea8",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "2b5eb45e.f0d0ec",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "4f6e3f40.d00b9",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "272c312.dd765ce",
         "type": "function",
-        "z": "9cce51b5.110628",
+        "z": "36aae840.ca6b58",
         "name": "Video_AIOT",
         "func": "\nmsg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/test.mp4\"\nreturn msg;",
         "outputs": 1,
@@ -20,15 +143,15 @@
         "y": 460,
         "wires": [
             [
-                "71d18a67.47026c"
+                "42df05bb.0b606c"
             ]
         ],
         "icon": "font-awesome/fa-file-video-o"
     },
     {
-        "id": "71d18a67.47026c",
+        "id": "42df05bb.0b606c",
         "type": "SZ Object Detection",
-        "z": "9cce51b5.110628",
+        "z": "36aae840.ca6b58",
         "name": "",
         "intype": "2",
         "tputype": "0",
@@ -49,48 +172,48 @@
         "y": 460,
         "wires": [
             [
-                "5021e005.71742"
+                "4044d602.921cf8"
             ]
         ]
     },
     {
-        "id": "5021e005.71742",
+        "id": "4044d602.921cf8",
         "type": "ui_result",
-        "z": "9cce51b5.110628",
-        "group": "b45c4059.3e909",
+        "z": "36aae840.ca6b58",
+        "group": "4f6e3f40.d00b9",
         "name": "",
         "title": "Label",
-        "order": 1,
+        "order": 3,
         "resolution": "1",
-        "width": "21",
-        "height": "14",
+        "width": 21,
+        "height": 14,
         "x": 750,
         "y": 460,
         "wires": []
     },
     {
-        "id": "ca6133b2.990438",
+        "id": "74d4deed.29433",
         "type": "ui_performance",
-        "z": "9cce51b5.110628",
-        "group": "b45c4059.3e909",
+        "z": "36aae840.ca6b58",
+        "group": "4f6e3f40.d00b9",
         "name": "",
         "title": "",
-        "order": 2,
-        "width": "9",
-        "height": "14",
+        "order": 4,
+        "width": 9,
+        "height": 14,
         "x": 550,
         "y": 320,
         "wires": []
     },
     {
-        "id": "7b4109fe.345ce",
+        "id": "fb1d1b9f.1ef528",
         "type": "ui_button",
-        "z": "9cce51b5.110628",
+        "z": "36aae840.ca6b58",
         "name": "StartDemo",
-        "group": "b45c4059.3e909",
+        "group": "4f6e3f40.d00b9",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": 4,
+        "height": 1,
         "passthru": false,
         "label": "StartDemo",
         "tooltip": "",
@@ -104,15 +227,15 @@
         "y": 380,
         "wires": [
             [
-                "4946986c.68d9d",
-                "c94e497a.6a5958"
+                "272c312.dd765ce",
+                "c4720e97.b2a66"
             ]
         ]
     },
     {
-        "id": "c94e497a.6a5958",
+        "id": "c4720e97.b2a66",
         "type": "trigger",
-        "z": "9cce51b5.110628",
+        "z": "36aae840.ca6b58",
         "name": "",
         "op1": "1",
         "op2": "0",
@@ -129,26 +252,8 @@
         "y": 320,
         "wires": [
             [
-                "ca6133b2.990438"
+                "74d4deed.29433"
             ]
         ]
-    },
-    {
-        "id": "b45c4059.3e909",
-        "type": "ui_group",
-        "z": "",
-        "name": "EdgeTPU Demonstration",
-        "tab": "e1376419.9b55f8",
-        "order": 3,
-        "disp": true,
-        "width": "30",
-        "collapse": false
-    },
-    {
-        "id": "e1376419.9b55f8",
-        "type": "ui_tab",
-        "z": "",
-        "name": "ASUS IoT Object Detection",
-        "icon": "dashboard"
     }
 ]

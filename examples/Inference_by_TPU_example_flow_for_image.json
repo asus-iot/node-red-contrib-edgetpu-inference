@@ -1,20 +1,154 @@
 [
     {
-        "id": "7d1550d1.eae058",
+        "id": "f70578b4.23fe58",
         "type": "tab",
         "label": "ASUS IoT Image Classification",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "5b700cfa.bb190c",
+        "id": "4f6e3f40.d00b9",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "851eb905.2c9538",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#2e5ea8",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#2e5ea8",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#2e5ea8",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#5384d0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#2e5ea8",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "7396097a.863228",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "36e1b165.ae243e",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "36e1b165.ae243e",
+        "type": "ui_tab",
+        "z": "",
+        "name": "ASUS IoT Image Classification",
+        "icon": "dashboard"
+    },
+    {
+        "id": "18c0062b.2d2d5a",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "7396097a.863228",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "1b22a0bd.8f517f",
         "type": "ui_button",
-        "z": "7d1550d1.eae058",
+        "z": "f70578b4.23fe58",
         "name": "StartDemo",
-        "group": "71077c79.836974",
+        "group": "7396097a.863228",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": 4,
+        "height": 1,
         "passthru": false,
         "label": "StartDemo",
         "tooltip": "",
@@ -28,15 +162,15 @@
         "y": 340,
         "wires": [
             [
-                "4d43a2e1.ff791c",
-                "56edb7ac.fc89a8"
+                "62d0e8c1.431a88",
+                "2cdf6403.0be70c"
             ]
         ]
     },
     {
-        "id": "56edb7ac.fc89a8",
+        "id": "2cdf6403.0be70c",
         "type": "trigger",
-        "z": "7d1550d1.eae058",
+        "z": "f70578b4.23fe58",
         "name": "",
         "op1": "1",
         "op2": "0",
@@ -53,28 +187,28 @@
         "y": 280,
         "wires": [
             [
-                "7b98196d.211158"
+                "2e5d7834.12f178"
             ]
         ]
     },
     {
-        "id": "7b98196d.211158",
+        "id": "2e5d7834.12f178",
         "type": "ui_performance",
-        "z": "7d1550d1.eae058",
-        "group": "71077c79.836974",
+        "z": "f70578b4.23fe58",
+        "group": "7396097a.863228",
         "name": "",
         "title": "",
-        "order": 2,
-        "width": "9",
-        "height": "14",
+        "order": 4,
+        "width": 9,
+        "height": 14,
         "x": 670,
         "y": 280,
         "wires": []
     },
     {
-        "id": "4d43a2e1.ff791c",
+        "id": "62d0e8c1.431a88",
         "type": "function",
-        "z": "7d1550d1.eae058",
+        "z": "f70578b4.23fe58",
         "name": "Image_person",
         "func": "\nmsg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/person.jpg\"\nreturn msg;",
         "outputs": 1,
@@ -85,15 +219,15 @@
         "y": 420,
         "wires": [
             [
-                "7c7044b1.a6cfbc"
+                "469c1214.dcad5c"
             ]
         ],
         "icon": "font-awesome/fa-file-video-o"
     },
     {
-        "id": "7c7044b1.a6cfbc",
+        "id": "469c1214.dcad5c",
         "type": "SZ Image Classification",
-        "z": "7d1550d1.eae058",
+        "z": "f70578b4.23fe58",
         "name": "",
         "intype": "3",
         "tputype": "0",
@@ -111,41 +245,23 @@
         "y": 420,
         "wires": [
             [
-                "bbec3e75.9d035"
+                "9f684376.a9eee"
             ]
         ]
     },
     {
-        "id": "bbec3e75.9d035",
+        "id": "9f684376.a9eee",
         "type": "ui_result",
-        "z": "7d1550d1.eae058",
-        "group": "71077c79.836974",
+        "z": "f70578b4.23fe58",
+        "group": "7396097a.863228",
         "name": "",
         "title": "Label",
-        "order": 1,
+        "order": 3,
         "resolution": "1",
-        "width": "21",
-        "height": "14",
+        "width": 21,
+        "height": 14,
         "x": 910,
         "y": 420,
         "wires": []
-    },
-    {
-        "id": "71077c79.836974",
-        "type": "ui_group",
-        "z": "",
-        "name": "EdgeTPU Demonstration",
-        "tab": "8f28d64c.d16f38",
-        "order": 3,
-        "disp": true,
-        "width": "30",
-        "collapse": false
-    },
-    {
-        "id": "8f28d64c.d16f38",
-        "type": "ui_tab",
-        "z": "",
-        "name": "ASUS IoT Image Classification",
-        "icon": "dashboard"
     }
 ]
