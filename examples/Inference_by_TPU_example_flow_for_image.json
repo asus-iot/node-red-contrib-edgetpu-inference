@@ -232,7 +232,7 @@
         "intype": "3",
         "tputype": "0",
         "tpunum": "2",
-        "modelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/inception_v4_299_quant.tflite",
+        "modelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/tf2_mobilenet_v3_edgetpu_1.0_224_ptq_edgetpu.tflite",
         "labelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/imagenet_labels.txt",
         "threshold": "0.1",
         "topk": "3",
