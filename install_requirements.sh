@@ -55,6 +55,7 @@ sudo ufw allow 1880
 sudo apt-get install -y python3-opencv
 sudo apt-get install -y python3-edgetpu
 npm install --prefix=~/.node-red node-red-dashboard
+npm install --prefix=~/.node-red node-red-contrib-image-tools
 npm install --prefix=~/.node-red ../node-red-contrib-edgetpu-inference
 cp settings.js ~/.node-red
 
