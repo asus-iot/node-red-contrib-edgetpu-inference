@@ -1,31 +1,31 @@
 [
     {
-        "id": "36aae840.ca6b58",
+        "id": "8004ad21.76eff",
         "type": "tab",
         "label": "ASUS IoT Object Detection",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "4f6e3f40.d00b9",
+        "id": "97d5890f.70fc58",
         "type": "ui_group",
         "z": "",
         "name": "EdgeTPU Demonstration",
-        "tab": "a68527be.dd1368",
+        "tab": "74feb4c6.ea378c",
         "order": 3,
         "disp": true,
-        "width": "30",
+        "width": "35",
         "collapse": false
     },
     {
-        "id": "a68527be.dd1368",
+        "id": "74feb4c6.ea378c",
         "type": "ui_tab",
         "z": "",
         "name": "ASUS IoT Object Detection",
         "icon": "dashboard"
     },
     {
-        "id": "851eb905.2c9538",
+        "id": "5dcfb97e.6c1ab8",
         "type": "ui_base",
         "theme": {
             "name": "theme-light",
@@ -121,18 +121,18 @@
         }
     },
     {
-        "id": "2b5eb45e.f0d0ec",
+        "id": "a58e4d19.d91a",
         "type": "ui_spacer",
         "name": "spacer",
-        "group": "4f6e3f40.d00b9",
+        "group": "97d5890f.70fc58",
         "order": 2,
         "width": 26,
         "height": 1
     },
     {
-        "id": "272c312.dd765ce",
+        "id": "35cabb9b.e09d24",
         "type": "function",
-        "z": "36aae840.ca6b58",
+        "z": "8004ad21.76eff",
         "name": "Video_AIOT",
         "func": "\nmsg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/test.mp4\"\nreturn msg;",
         "outputs": 1,
@@ -143,15 +143,15 @@
         "y": 460,
         "wires": [
             [
-                "42df05bb.0b606c"
+                "3a796555.413e8a"
             ]
         ],
         "icon": "font-awesome/fa-file-video-o"
     },
     {
-        "id": "42df05bb.0b606c",
+        "id": "3a796555.413e8a",
         "type": "SZ Object Detection",
-        "z": "36aae840.ca6b58",
+        "z": "8004ad21.76eff",
         "name": "",
         "intype": "2",
         "tputype": "0",
@@ -172,45 +172,45 @@
         "y": 460,
         "wires": [
             [
-                "4044d602.921cf8"
+                "d2875bba.967de8"
             ]
         ]
     },
     {
-        "id": "4044d602.921cf8",
+        "id": "d2875bba.967de8",
         "type": "ui_result",
-        "z": "36aae840.ca6b58",
-        "group": "4f6e3f40.d00b9",
+        "z": "8004ad21.76eff",
+        "group": "97d5890f.70fc58",
         "name": "",
         "title": "Label",
         "order": 3,
         "resolution": "1",
-        "width": 21,
+        "width": "25",
         "height": 14,
         "x": 750,
         "y": 460,
         "wires": []
     },
     {
-        "id": "74d4deed.29433",
+        "id": "1ef151ec.ff453e",
         "type": "ui_performance",
-        "z": "36aae840.ca6b58",
-        "group": "4f6e3f40.d00b9",
+        "z": "8004ad21.76eff",
+        "group": "97d5890f.70fc58",
         "name": "",
         "title": "",
         "order": 4,
-        "width": 9,
+        "width": "10",
         "height": 14,
         "x": 550,
         "y": 320,
         "wires": []
     },
     {
-        "id": "fb1d1b9f.1ef528",
+        "id": "4d9c4504.86b68c",
         "type": "ui_button",
-        "z": "36aae840.ca6b58",
+        "z": "8004ad21.76eff",
         "name": "StartDemo",
-        "group": "4f6e3f40.d00b9",
+        "group": "97d5890f.70fc58",
         "order": 1,
         "width": 4,
         "height": 1,
@@ -227,15 +227,15 @@
         "y": 380,
         "wires": [
             [
-                "272c312.dd765ce",
-                "c4720e97.b2a66"
+                "35cabb9b.e09d24",
+                "f0631546.2becf8"
             ]
         ]
     },
     {
-        "id": "c4720e97.b2a66",
+        "id": "f0631546.2becf8",
         "type": "trigger",
-        "z": "36aae840.ca6b58",
+        "z": "8004ad21.76eff",
         "name": "",
         "op1": "1",
         "op2": "0",
@@ -252,7 +252,7 @@
         "y": 320,
         "wires": [
             [
-                "74d4deed.29433"
+                "1ef151ec.ff453e"
             ]
         ]
     }

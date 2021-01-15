@@ -1,13 +1,13 @@
 [
     {
-        "id": "f70578b4.23fe58",
+        "id": "ae61bbf9.c7e788",
         "type": "tab",
         "label": "ASUS IoT Image Classification",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "4f6e3f40.d00b9",
+        "id": "5f1b7fbf.680d7",
         "type": "ui_group",
         "z": "",
         "name": "EdgeTPU Demonstration",
@@ -18,7 +18,7 @@
         "collapse": false
     },
     {
-        "id": "851eb905.2c9538",
+        "id": "b4c9988b.b17f28",
         "type": "ui_base",
         "theme": {
             "name": "theme-light",
@@ -114,38 +114,38 @@
         }
     },
     {
-        "id": "7396097a.863228",
+        "id": "2e1f2d8c.6d5fc2",
         "type": "ui_group",
         "z": "",
         "name": "EdgeTPU Demonstration",
-        "tab": "36e1b165.ae243e",
+        "tab": "fcb2decc.cb9a7",
         "order": 3,
         "disp": true,
-        "width": "30",
+        "width": "35",
         "collapse": false
     },
     {
-        "id": "36e1b165.ae243e",
+        "id": "fcb2decc.cb9a7",
         "type": "ui_tab",
         "z": "",
         "name": "ASUS IoT Image Classification",
         "icon": "dashboard"
     },
     {
-        "id": "18c0062b.2d2d5a",
+        "id": "142dd38d.ec656c",
         "type": "ui_spacer",
         "name": "spacer",
-        "group": "7396097a.863228",
+        "group": "2e1f2d8c.6d5fc2",
         "order": 2,
         "width": 26,
         "height": 1
     },
     {
-        "id": "1b22a0bd.8f517f",
+        "id": "bdab6eaa.aa83d",
         "type": "ui_button",
-        "z": "f70578b4.23fe58",
+        "z": "ae61bbf9.c7e788",
         "name": "StartDemo",
-        "group": "7396097a.863228",
+        "group": "2e1f2d8c.6d5fc2",
         "order": 1,
         "width": 4,
         "height": 1,
@@ -162,15 +162,15 @@
         "y": 340,
         "wires": [
             [
-                "62d0e8c1.431a88",
-                "2cdf6403.0be70c"
+                "2469a494.01f09c",
+                "c919e8c1.74e828"
             ]
         ]
     },
     {
-        "id": "2cdf6403.0be70c",
+        "id": "c919e8c1.74e828",
         "type": "trigger",
-        "z": "f70578b4.23fe58",
+        "z": "ae61bbf9.c7e788",
         "name": "",
         "op1": "1",
         "op2": "0",
@@ -187,28 +187,28 @@
         "y": 280,
         "wires": [
             [
-                "2e5d7834.12f178"
+                "a4e357a0.fef3e8"
             ]
         ]
     },
     {
-        "id": "2e5d7834.12f178",
+        "id": "a4e357a0.fef3e8",
         "type": "ui_performance",
-        "z": "f70578b4.23fe58",
-        "group": "7396097a.863228",
+        "z": "ae61bbf9.c7e788",
+        "group": "2e1f2d8c.6d5fc2",
         "name": "",
         "title": "",
         "order": 4,
-        "width": 9,
+        "width": "10",
         "height": 14,
         "x": 670,
         "y": 280,
         "wires": []
     },
     {
-        "id": "62d0e8c1.431a88",
+        "id": "2469a494.01f09c",
         "type": "function",
-        "z": "f70578b4.23fe58",
+        "z": "ae61bbf9.c7e788",
         "name": "Image_person",
         "func": "\nmsg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/person.jpg\"\nreturn msg;",
         "outputs": 1,
@@ -219,15 +219,15 @@
         "y": 420,
         "wires": [
             [
-                "469c1214.dcad5c"
+                "cd859e9a.50d62"
             ]
         ],
         "icon": "font-awesome/fa-file-video-o"
     },
     {
-        "id": "469c1214.dcad5c",
+        "id": "cd859e9a.50d62",
         "type": "SZ Image Classification",
-        "z": "f70578b4.23fe58",
+        "z": "ae61bbf9.c7e788",
         "name": "",
         "intype": "3",
         "tputype": "0",
@@ -245,20 +245,20 @@
         "y": 420,
         "wires": [
             [
-                "9f684376.a9eee"
+                "883d4ec4.19c2c"
             ]
         ]
     },
     {
-        "id": "9f684376.a9eee",
+        "id": "883d4ec4.19c2c",
         "type": "ui_result",
-        "z": "f70578b4.23fe58",
-        "group": "7396097a.863228",
+        "z": "ae61bbf9.c7e788",
+        "group": "2e1f2d8c.6d5fc2",
         "name": "",
         "title": "Label",
         "order": 3,
         "resolution": "1",
-        "width": 21,
+        "width": "25",
         "height": 14,
         "x": 910,
         "y": 420,
