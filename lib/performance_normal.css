@@ -1,0 +1,616 @@
+.bg_p {
+  width: 481px;
+  height: 693px;
+  border-radius: 16px;
+  box-shadow: 0px 8px 13px 0 rgba(6, 56, 70, 0.33);
+  background-image: linear-gradient(to top, #2e5fa8, #4b87ce, #58adbd, #59ceb7);
+  display: grid;
+  grid-template-columns: 18px 445px 18px;
+  grid-template-rows: 59px 175px 24px 175px 26px 216px 18px;
+}
+
+.Performance-Node {
+  width: 140px;
+  height: 11px;
+  margin: 25px 0px 0px 11px;
+  font-family: "Play", sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fefeff;
+}
+
+.info_header {
+  height: 35px;
+  margin-top: 0px;
+}
+
+.info_left {
+  width: 43px;
+  height: 150px;
+  float: left;
+}
+
+.info_right {
+  width: 401px;
+  height: 140px;
+  float: left;
+}
+
+.chart_bg {
+  width: 361px;
+  height: 87px;
+  object-fit: contain;
+  margin-left: 12px;
+  background: url(http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/chart-bg.png)
+    no-repeat;
+}
+
+.cpu_info {
+  box-shadow: 0px 10px 18px 0 rgba(40, 93, 147, 0.33);
+  border-radius: 10px;
+  background-color: #ffffff;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.ram_info {
+  box-shadow: 0px 10px 18px 0 rgba(40, 93, 147, 0.33);
+  border-radius: 10px;
+  background-color: #ffffff;
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+}
+
+.tpu_info {
+  box-shadow: 0px 10px 18px 0 rgba(40, 93, 147, 0.33);
+  border-radius: 10px;
+  background-color: #ffffff;
+  grid-column: 2 / 3;
+  grid-row: 6 / 7;
+}
+
+.info_title {
+  width: 80px;
+  height: 9px;
+  padding: 15px 0px 0px 22px;
+  font-family: Play;
+  font-size: 1.21rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5d8de4;
+}
+
+.info_title_tpu {
+  width: 60px;
+  height: 17px;
+  padding: 15px 0px 0px 21px;
+  font-family: Play;
+  font-size: 1.21rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5d8de4;
+}
+
+.performance_bg_up_pic {
+  width: 242px;
+  height: 214px;
+  margin: 0px 0px 0px -226px;
+  object-fit: contain;
+}
+
+.performance_bg_down_pic {
+  width: 169px;
+  height: 174px;
+  margin: 518px 5px 0px 8px;
+  margin-left: 0px;
+  object-fit: contain;
+}
+
+.ic_cpu {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 45px;
+  left: 415px;
+  object-fit: contain;
+}
+
+.ic_ram {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 245px;
+  left: 415px;
+  object-fit: contain;
+}
+
+.ic_tpu {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 445px;
+  left: 415px;
+  object-fit: contain;
+}
+
+.High {
+  width: 24px;
+  height: 12px;
+  padding: 5px 0px 0px 23px;
+  font-family: Roboto;
+  font-size: 0.91rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #8989a4;
+}
+
+.Low {
+  width: 22px;
+  height: 9px;
+  padding: 2px 0px 0px 22px;
+  font-family: Roboto;
+  font-size: 0.91rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #8989a4;
+}
+
+.per {
+  width: 29px;
+  height: 9px;
+  padding: 5px 0px 8px 13px;
+  font-family: Roboto;
+  font-size: 0.91rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #8989a4;
+  display: inline-block;
+}
+
+.line {
+  width: 296px;
+  height: 0.1px;
+  margin: 0px 0px 18px 64px;
+  opacity: 0.32;
+  border: solid 1px #99baff;
+  background-color: #99baff;
+}
+
+.line-last {
+  width: 296px;
+  height: 0.1px;
+  margin: 0px 0px 8px 64px;
+  opacity: 0.32;
+  border: solid 1px #99baff;
+  background-color: #99baff;
+}
+
+.minute {
+  width: 19px;
+  height: 9px;
+  margin: 3.5px 0px 0px 13px;
+  font-family: Roboto;
+  font-size: 0.91rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #8989a4;
+  display: inline-block;
+}
+
+.s {
+  width: 10px;
+  height: 9px;
+  margin: 0px 0px 0px 322px;
+  font-family: Roboto;
+  font-size: 0.91rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #8989a4;
+  display: inline-block;
+}
+
+.bar_mask {
+  width: 24px;
+  height: 93px;
+  object-fit: contain;
+  margin: -1.5px 0px 0px 0px;
+  position: absolute;
+  z-index: 10;
+}
+
+.tpu_bar_mask {
+  width: 34px;
+  height: 99px;
+  margin: -1.5px 0px 0px -1px;
+  position: absolute;
+  z-index: 10;
+}
+
+.cpu_bar_bg {
+  width: 24px;
+  height: 90px;
+  margin: 3px 0px 0px 22px;
+  background: #c3d7ff;
+}
+
+.ram_bar_bg {
+  width: 24px;
+  height: 90px;
+  margin: 3px 0px 0px 22px;
+  background: #c6e9f4;
+}
+
+.tpu_bar_bg {
+  width: 32px;
+  height: 97px;
+  margin: 0px 1.8px -5px 0px;
+  display: inline-block;
+  background: #99a8c3;
+}
+
+.tooltip {
+  width: 32px;
+  height: 97px;
+  margin: -11px 0px 0px 12.5px;
+  display: inline-block;
+  background: #99a8c3;
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  height: 60px;
+  background-color: #ffffff;
+  color: #454545;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  top: -60px;
+  left: -40px;
+  z-index: 20;
+  word-break: break-all;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  word-break: break-all;
+}
+
+.chart_container_cpu {
+  position: absolute;
+  top: 27px;
+  left: 71.5px;
+  margin: auto;
+  height: 50px;
+  width: 370px;
+}
+
+.chart_container_cpu_bar {
+  position: absolute;
+  top: 117px;
+  left: 32px;
+  margin: auto;
+  height: 100px;
+  width: 45px;
+}
+
+.chart_container_ram {
+  position: absolute;
+  top: 226px;
+  left: 71.5px;
+  margin: auto;
+  height: 50px;
+  width: 370px;
+}
+
+.chart_container_ram_bar {
+  position: absolute;
+  top: 316px;
+  left: 32px;
+  margin: auto;
+  height: 100px;
+  width: 45px;
+}
+
+.chart_container_tpu_bar {
+  position: absolute;
+  margin: auto;
+  top: 532px;
+  left: 74px;
+  height: 105px;
+  width: 370px;
+}
+
+.tpu_right {
+  width: 373px;
+  height: 136px;
+  margin-left: 10px;
+  margin-top: 3px;
+  border-radius: 8px;
+  background-color: #ebf1fc;
+  float: left;
+}
+
+.tpu_left {
+  width: 43px;
+  height: 181px;
+  float: left;
+}
+
+.oC {
+  width: 20px;
+  height: 12px;
+  margin: 12px 0px 9px 21px;
+  font-family: Roboto;
+  font-size: 0.92rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #8989a4;
+}
+
+.temp_info {
+  width: 18px;
+  height: 8px;
+  margin: 3.5px 0px 9px 21px;
+  font-family: Roboto;
+  font-size: 0.92rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #8989a4;
+}
+
+.TPU_name {
+  width: 26px;
+  height: 8px;
+  margin: 0px 5px 0px 2.8px;
+  font-family: Play;
+  font-size: 0.92rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #8989a4;
+  display: table-cell;
+}
+
+.tpu_id {
+  width: 360px;
+  height: 8px;
+  margin-left: 25px;
+  margin-top: 5px;
+  float: left;
+  display: table;
+  table-layout: fixed;
+}
+
+.tpu_btn_container {
+  width: auto;
+  height: auto;
+  float: left;
+  margin-left: 150px;
+  margin-top: 5px;
+}
+
+.tpu_page1 {
+  width: auto;
+  height: 11px;
+  margin-left: 20px;
+  font-family: Roboto;
+  font-size: 1.16rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  color: #2d5fa8;
+  display: inline-block;
+}
+
+.slash {
+  width: auto;
+  height: 11px;
+  font-family: Roboto;
+  font-size: 1.16rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  color: #99a8c3;
+  display: inline-block;
+}
+
+.tpu_page2 {
+  width: auto;
+  height: 11px;
+  font-family: Roboto;
+  font-size: 1.16rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  color: #99a8c3;
+  display: inline-block;
+}
+
+.nr-dashboard-theme .nr-dashboard-template .md-button {
+  margin: 0px -2.6px 5px 0px;
+  min-height: 18px;
+  min-width: unset;
+  line-height: unset;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
+.nr-dashboard-theme .nr-dashboard-template .md-button:not(:first-of-type) {
+  margin-top: 0px;
+  margin-left: 5px;
+}
+
+.btn_left_able {
+  display: inline-block;
+  background-color: #ffffff;
+  background: url(http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/btn-left-able.png)
+    no-repeat;
+  border: none;
+  width: 10px;
+  height: 13px;
+  position: absolute;
+  z-index: 10;
+  outline: none;
+}
+
+.btn_left_disable {
+  display: inline-block;
+  background-color: #ffffff;
+  background: url(http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/btn-left-disable.png)
+    no-repeat;
+  border: none;
+  width: 10px;
+  height: 13px;
+  position: absolute;
+  z-index: 10;
+  outline: none;
+}
+
+.btn_right_able {
+  display: inline-block;
+  background-color: #ffffff;
+  background: url(http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/btn-right-able.png)
+    no-repeat;
+  border: none;
+  width: 10px;
+  height: 13px;
+  position: absolute;
+  z-index: 10;
+  margin-left: 10px;
+  outline: none;
+}
+
+.btn_right_disable {
+  display: inline-block;
+  background-color: #ffffff;
+  background: url("http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/btn-right-disable.png")
+    no-repeat;
+  border: none;
+  width: 10px;
+  height: 13px;
+  position: absolute;
+  z-index: 10;
+  margin-left: 10px;
+  outline: none;
+}
+
+.tpu_status_info {
+  margin: 0px 0px 20px 0px;
+  width: auto;
+  height: 22px;
+}
+
+.tpu_off {
+  background: url("http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/ic-tpu-off.png")
+    no-repeat;
+  margin: 5px 0px 0px 18.4px;
+  height: 22px;
+  width: 26px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.tpu_on {
+  background: url("http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/ic-tpu-on.png")
+    no-repeat;
+  margin: 5px 0px 0px 18.4px;
+  height: 22px;
+  width: 26px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.button {
+  width: 100px;
+  text-align: center;
+  color: #fff;
+  font-size: 3em;
+}
+.button:hover .hover {
+  display: block;
+}
+.hover {
+  display: none;
+  background-color: #ffb2b2;
+}
+
+.btn-test {
+  display: inline-block;
+  background-color: #ffffff;
+  background: url(http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/btn-right-disable.png)
+    no-repeat;
+  border: none;
+  width: 10px;
+  height: 13px;
+  position: absolute;
+  z-index: 10;
+  margin-left: 20px;
+  outline: none;
+}
+
+.btn-test:after {
+  display: inline-block;
+  background-color: #ffffff;
+  background: url(http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/btn-right-disable.png)
+    no-repeat;
+  border: none;
+  width: 10px;
+  height: 13px;
+  position: absolute;
+  z-index: 10;
+  margin-left: 20px;
+}
