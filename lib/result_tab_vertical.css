@@ -1,12 +1,12 @@
 .bg {
-  width: 930px;
-  height: 916px;
+  width: 675px;
+  height: 843px;
   border-radius: 10px;
   box-shadow: 0px 5px 10px 0 rgba(6, 56, 70, 0.33);
   background-color: #ffffff;
   display: grid;
-  grid-template-columns: 17px 895px 18px;
-  grid-template-rows: 128.2px 500.2px 25.6px 244px 18px;
+  grid-template-columns: 17px 641px 17px;
+  grid-template-rows: 123.2px 357.6px 24.2px 320px 18px;
 }
 
 .head {
@@ -35,13 +35,13 @@
   max-height: 100%;
   max-width: 100%;
   width: auto;
-  height: 500.2px;
+  height: 357.6px;
   margin: auto;
 }
 
 .Screen_canvas {
   width: auto;
-  height: 500.2px;
+  height: 357.6px;
   position: absolute;
   z-index: 1;
 }
@@ -138,16 +138,16 @@
 }
 
 .r_content {
-  width: 895px;
-  height: 200px;
+  width: 641px;
+  height: 275px;
   overflow-x: hidden;
   overflow-y: auto;
 }
 
 .Result-Name-box {
-  width: 260px;
+  width: 300px;
   height: auto;
-  margin: 0px 11px 13px 6px;
+  margin: 0px 11px 13px 7px;
   display: inline-block;
 }
 
@@ -169,7 +169,7 @@
 .Result-Line {
   width: 250px;
   height: 1px;
-  margin: 15px 0px 16px 26px;
+  margin: 15px 0px 16px 18px;
   background-color: #c0def0;
 }
 
@@ -199,14 +199,14 @@
 .result_bg_pic {
   width: 215px;
   height: 192px;
-  margin: 0px 0px 0px 713px;
+  margin: 0px 0px 0px 457px;
   object-fit: contain;
 }
 
 .ic_result {
   width: 36px;
   height: 36px;
-  margin: 638px 0px 0px 860px;
+  margin: 485px 0px 0px 600px;
   object-fit: contain;
   position: absolute;
   z-index: 10;

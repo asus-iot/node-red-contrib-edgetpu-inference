@@ -10,7 +10,7 @@
 }
 
 .Performance-Node {
-  width: 140px;
+  width: auto;
   height: 11px;
   margin: 25px 0px 0px 11px;
   font-family: "Play", sans-serif;
@@ -75,7 +75,7 @@
 }
 
 .info_title {
-  width: 80px;
+  width: auto;
   height: 9px;
   padding: 15px 0px 0px 22px;
   font-family: Play;

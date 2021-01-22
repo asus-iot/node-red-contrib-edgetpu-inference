@@ -1,11 +1,11 @@
 .bg_p {
-  width: 930px;
+  width: 675px;
   height: 690px;
   border-radius: 16px;
   box-shadow: 0px 8px 13px 0 rgba(6, 56, 70, 0.33);
   background-image: linear-gradient(to top, #2e5fa8, #4b87ce, #58adbd, #59ceb7);
   display: grid;
-  grid-template-columns: 17px 896px 17px;
+  grid-template-columns: 17px 641px 17px;
   grid-template-rows: 59px 175px 24px 175px 24px 216px 17px;
 }
 
@@ -36,17 +36,17 @@
 }
 
 .info_right {
-  width: 853px;
+  width: 598px;
   height: 140px;
   float: left;
 }
 
 .chart_bg {
-  width: 813px;
+  width: 562px;
   height: 87px;
   object-fit: contain;
   margin-left: 12px;
-  background: url(http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/chart-bg_tab_1024.png)
+  background: url(http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/chart-bg_tab_768.png)
     no-repeat;
 }
 
@@ -123,8 +123,8 @@
   width: 34px;
   height: 34px;
   position: absolute;
-  top: 1080px;
-  left: 865px;
+  top: 1020px;
+  left: 610px;
   object-fit: contain;
 }
 
@@ -132,8 +132,8 @@
   width: 34px;
   height: 34px;
   position: absolute;
-  top: 1280px;
-  left: 865px;
+  top: 1220px;
+  left: 610px;
   object-fit: contain;
 }
 
@@ -141,8 +141,8 @@
   width: 34px;
   height: 34px;
   position: absolute;
-  top: 1480px;
-  left: 865px;
+  top: 1420px;
+  left: 610px;
   object-fit: contain;
 }
 
@@ -229,7 +229,7 @@
 .s {
   width: 10px;
   height: 9px;
-  margin: 0px 0px 0px 775px;
+  margin: 0px 0px 0px 525px;
   font-family: Roboto;
   font-size: 0.91rem;
   font-weight: normal;
@@ -314,16 +314,16 @@
 
 .chart_container_cpu {
   position: absolute;
-  top: 839px;
-  left: 71px;
+  top: 903px;
+  left: 70px;
   margin: auto;
   height: 50px;
-  width: 820px;
+  width: 570px;
 }
 
 .chart_container_cpu_bar {
   position: absolute;
-  top: 1153px;
+  top: 1093px;
   left: 32px;
   margin: auto;
   height: 100px;
@@ -332,16 +332,16 @@
 
 .chart_container_ram {
   position: absolute;
-  top: 1038px;
-  left: 71px;
+  top: 1102px;
+  left: 70px;
   margin: auto;
   height: 50px;
-  width: 820px;
+  width: 570px;
 }
 
 .chart_container_ram_bar {
   position: absolute;
-  top: 1352px;
+  top: 1292px;
   left: 32px;
   margin: auto;
   height: 100px;
@@ -351,14 +351,14 @@
 .chart_container_tpu_bar {
   position: absolute;
   margin: auto;
-  top: 1565px;
-  left: 73px;
+  top: 1505px;
+  left: 71px;
   height: 105px;
-  width: 824px;
+  width: 575px;
 }
 
 .tpu_right {
-  width: 823px;
+  width: 570px;
   height: 136px;
   margin-left: 10px;
   margin-top: 3px;
@@ -421,7 +421,7 @@
 }
 
 .tpu_id {
-  width: 800px;
+  width: 550px;
   height: 8px;
   margin-left: 75px;
   margin-top: -40px;
@@ -430,9 +430,9 @@
 }
 
 .tpu_btn_container {
-  width: 800;
+  width: 550;
   height: auto;
-  margin-left: 410px;
+  margin-left: 270px;
   margin-top: -20px;
 }
 
@@ -550,7 +550,7 @@
 
 .tpu_status_info {
   margin: 5px 0px 15px 24px;
-  width: 800px;
+  width: 550px;
   height: 22px;
   display: table;
 }
@@ -617,27 +617,27 @@
 }
 
 .nr-dashboard-cardpanel {
-  width: 1024px;
+    width:768px;
 }
 
 .nr-dashboard-theme .nr-dashboard-template {
-  width: 1024px !important;
-  height: 940px !important;
+    width:768px !important;
+    height: 880px !important;
 }
 
-.nr-dashboard-cardcontainer > * {
-  margin: unset !important;
-  position: unset;
+.nr-dashboard-cardcontainer > *{
+    margin: unset !important;
+    position: unset;
 }
 
 .nr-dashboard-cardtitle {
-  width: 1024px !important;
+    width: 768px !important;
 }
 
 .nr-dashboard-cardcontainer {
-  width: 1024px !important;
+  width: 768px !important;
 }
 
 .nr-dashboard-theme .nr-dashboard-spacer {
-  width: 1024px !important;
+  width: 768px !important;
 }
