@@ -22,6 +22,7 @@
   letter-spacing: normal;
   text-align: left;
   color: #fefeff;
+  z-index:10;
 }
 
 .info_header {
@@ -120,28 +121,28 @@
 }
 
 .ic_cpu {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   position: absolute;
-  top: 1020px;
+  top: 982px;
   left: 610px;
   object-fit: contain;
 }
 
 .ic_ram {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   position: absolute;
-  top: 1220px;
+  top: 1182px;
   left: 610px;
   object-fit: contain;
 }
 
 .ic_tpu {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   position: absolute;
-  top: 1420px;
+  top: 1382px;
   left: 610px;
   object-fit: contain;
 }
@@ -314,7 +315,7 @@
 
 .chart_container_cpu {
   position: absolute;
-  top: 903px;
+  top: 865px;
   left: 70px;
   margin: auto;
   height: 50px;
@@ -323,7 +324,7 @@
 
 .chart_container_cpu_bar {
   position: absolute;
-  top: 1093px;
+  top: 1055px;
   left: 32px;
   margin: auto;
   height: 100px;
@@ -332,7 +333,7 @@
 
 .chart_container_ram {
   position: absolute;
-  top: 1102px;
+  top: 1064px;
   left: 70px;
   margin: auto;
   height: 50px;
@@ -341,7 +342,7 @@
 
 .chart_container_ram_bar {
   position: absolute;
-  top: 1292px;
+  top: 1254px;
   left: 32px;
   margin: auto;
   height: 100px;
@@ -351,7 +352,7 @@
 .chart_container_tpu_bar {
   position: absolute;
   margin: auto;
-  top: 1505px;
+  top: 1467px;
   left: 71px;
   height: 105px;
   width: 575px;
@@ -434,6 +435,7 @@
   height: auto;
   margin-left: 270px;
   margin-top: -20px;
+  display:inline-block;
 }
 
 .tpu_page1 {
@@ -617,11 +619,11 @@
 }
 
 .nr-dashboard-cardpanel {
-    width:768px;
+    width:685px;
 }
 
 .nr-dashboard-theme .nr-dashboard-template {
-    width:768px !important;
+    width:685px !important;
     height: 880px !important;
 }
 
@@ -631,13 +633,19 @@
 }
 
 .nr-dashboard-cardtitle {
-    width: 768px !important;
+    width: 685px !important;
 }
 
 .nr-dashboard-cardcontainer {
-  width: 768px !important;
+  width: 685px !important;
 }
 
 .nr-dashboard-theme .nr-dashboard-spacer {
-  width: 768px !important;
+  width: 685px !important;
+  height: 10px !important;
 }
+
+.masonry-container > .visible {
+  left: 40px ;
+}
+

@@ -37,13 +37,14 @@
   width: auto;
   height: 500.2px;
   margin: auto;
+  z-index:10;
 }
 
 .Screen_canvas {
   width: auto;
   height: 500.2px;
   position: absolute;
-  z-index: 1;
+  z-index: 11;
 }
 
 .Result-Node {
@@ -138,14 +139,15 @@
 }
 
 .r_content {
-  width: 895px;
-  height: 200px;
+  width: 880px;
+  height: 180px;
+  padding: 0px 0px 10px 0px;
   overflow-x: hidden;
   overflow-y: auto;
 }
 
 .Result-Name-box {
-  width: 260px;
+  width: 270px;
   height: auto;
   margin: 0px 11px 13px 6px;
   display: inline-block;
@@ -167,9 +169,9 @@
 }
 
 .Result-Line {
-  width: 250px;
+  width: 260px;
   height: 1px;
-  margin: 15px 0px 16px 26px;
+  margin: 15px 0px 16px 20px;
   background-color: #c0def0;
 }
 
@@ -199,8 +201,11 @@
 .result_bg_pic {
   width: 215px;
   height: 192px;
-  margin: 0px 0px 0px 713px;
+  background: url(http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/result-bg-pic.png)
+  no-repeat;
   object-fit: contain;
+  position: absolute;
+  left: 720px;
 }
 
 .ic_result {
@@ -296,4 +301,20 @@
 .nr-dashboard-cardcontainer > * {
   margin: unset !important;
   position: unset;
+}
+
+.nr-dashboard-theme .nr-dashboard-button .md-button {
+  left: 6px;
+}
+
+.masonry-container {
+  background-color: #ffffff;
+  height: 2000px;
+}
+
+.nr-dashboard-cardpanel > p {
+  min-height: 0px;
+  margin-left: 6px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }

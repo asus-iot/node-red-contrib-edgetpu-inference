@@ -22,6 +22,7 @@
   letter-spacing: normal;
   text-align: left;
   color: #fefeff;
+  z-index: 10;
 }
 
 .info_header {

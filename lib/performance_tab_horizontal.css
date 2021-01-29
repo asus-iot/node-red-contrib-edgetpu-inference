@@ -22,6 +22,7 @@
   letter-spacing: normal;
   text-align: left;
   color: #fefeff;
+  z-index:10;
 }
 
 .info_header {
@@ -120,29 +121,29 @@
 }
 
 .ic_cpu {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   position: absolute;
-  top: 1080px;
-  left: 865px;
+  top: 1042px;
+  left: 860px;
   object-fit: contain;
 }
 
 .ic_ram {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   position: absolute;
-  top: 1280px;
-  left: 865px;
+  top: 1242px;
+  left: 860px;
   object-fit: contain;
 }
 
 .ic_tpu {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   position: absolute;
-  top: 1480px;
-  left: 865px;
+  top: 1442px;
+  left: 860px;
   object-fit: contain;
 }
 
@@ -314,7 +315,7 @@
 
 .chart_container_cpu {
   position: absolute;
-  top: 839px;
+  top: 801px;
   left: 71px;
   margin: auto;
   height: 50px;
@@ -323,7 +324,7 @@
 
 .chart_container_cpu_bar {
   position: absolute;
-  top: 1153px;
+  top: 1115px;
   left: 32px;
   margin: auto;
   height: 100px;
@@ -332,7 +333,7 @@
 
 .chart_container_ram {
   position: absolute;
-  top: 1038px;
+  top: 1000px;
   left: 71px;
   margin: auto;
   height: 50px;
@@ -341,7 +342,7 @@
 
 .chart_container_ram_bar {
   position: absolute;
-  top: 1352px;
+  top: 1314px;
   left: 32px;
   margin: auto;
   height: 100px;
@@ -351,7 +352,7 @@
 .chart_container_tpu_bar {
   position: absolute;
   margin: auto;
-  top: 1565px;
+  top: 1539px;
   left: 73px;
   height: 105px;
   width: 824px;
@@ -361,7 +362,7 @@
   width: 823px;
   height: 136px;
   margin-left: 10px;
-  margin-top: 3px;
+  margin-top: 15px;
   border-radius: 8px;
   background-color: #ebf1fc;
   float: left;
@@ -378,7 +379,7 @@
 .oC {
   width: 20px;
   height: 12px;
-  margin: 12px 0px 9px 21px;
+  margin: 24px 0px 9px 21px;
   font-family: Roboto;
   font-size: 0.92rem;
   font-weight: normal;
@@ -424,7 +425,7 @@
   width: 800px;
   height: 8px;
   margin-left: 75px;
-  margin-top: -40px;
+  margin-top: -28px;
   display: table;
   table-layout: fixed;
 }
@@ -434,6 +435,7 @@
   height: auto;
   margin-left: 410px;
   margin-top: -20px;
+  display: none;
 }
 
 .tpu_page1 {
@@ -617,11 +619,11 @@
 }
 
 .nr-dashboard-cardpanel {
-  width: 1024px;
+  width: 950px;
 }
 
 .nr-dashboard-theme .nr-dashboard-template {
-  width: 1024px !important;
+  width: 950px !important;
   height: 940px !important;
 }
 
@@ -631,13 +633,18 @@
 }
 
 .nr-dashboard-cardtitle {
-  width: 1024px !important;
+  width: 950px !important;
 }
 
 .nr-dashboard-cardcontainer {
-  width: 1024px !important;
+  width: 950px !important;
 }
 
 .nr-dashboard-theme .nr-dashboard-spacer {
-  width: 1024px !important;
+  width: 950px !important;
+  height: 10px !important;
+}
+
+.masonry-container > .visible {
+  left: 40px ;
 }

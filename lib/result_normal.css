@@ -37,13 +37,14 @@
   width: auto;
   height: 550px;
   margin: auto;
+  z-index:10;
 }
 
 .Screen_canvas {
   width: auto;
   height: 550px;
   position: absolute;
-  z-index: 1;
+  z-index: 11;
 }
 
 .Result-Node {
@@ -211,14 +212,18 @@
 .result_bg_pic {
   width: 215px;
   height: 192px;
-  margin: 0px 0px 0px 1097px;
+  background: url(http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/result-bg-pic.png)
+  no-repeat;
   object-fit: contain;
+  position: absolute;
+  left: 1097px;
+
 }
 
 .ic_result {
   width: 36px;
   height: 36px;
-  margin: 105px 0px 0px -60px;
+  margin: 108px 0px 0px 1240px;
   object-fit: contain;
 }
 

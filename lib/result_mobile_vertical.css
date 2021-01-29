@@ -37,13 +37,14 @@
   width: auto;
   height: 182px;
   margin: auto;
+  z-index:10;
 }
 
 .Screen_canvas {
   width: auto;
   height: 182px;
   position: absolute;
-  z-index: 1;
+  z-index: 11;
 }
 
 .Result-Node {
@@ -139,10 +140,11 @@
 }
 
 .r_content {
-  width: 328px;
-  height: 500px;
+  width: 315px;
+  height: 480px;
   overflow-x: hidden;
   overflow-y: auto;
+  padding-bottom: 10px;
 }
 
 .Result-Name-box {
@@ -200,14 +202,16 @@
 .result_bg_pic {
   width: 173px;
   height: 153px;
-  margin: 0px 0px 0px 180px;
+  background: url(http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/result-bg-pic.png) no-repeat;
   object-fit: contain;
+  position: absolute;
+  left: 185px;
 }
 
 .ic_result {
   width: 28px;
   height: 28px;
-  margin: 360px 0px 0px 300px;
+  margin: 358px 0px 0px 295px;
   object-fit: contain;
   position: absolute;
   z-index: 10;
@@ -298,3 +302,4 @@
   margin: unset !important;
   position: unset;
 }
+
