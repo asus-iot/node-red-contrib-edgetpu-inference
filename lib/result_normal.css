@@ -212,7 +212,6 @@
 .result_bg_pic {
   width: 271px;
   height: 140px;
-  background: url(http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/result-bg-pic.png) no-repeat;
   object-fit: contain;
   position: absolute;
   left: 1046px;

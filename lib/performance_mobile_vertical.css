@@ -47,8 +47,6 @@
   height: 87px;
   object-fit: contain;
   margin-left: 12px;
-  background: url(http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/chart-bg_mobile_375.png)
-    no-repeat;
 }
 
 .cpu_info {
@@ -424,7 +422,7 @@
 .tpu_id {
   width: 250px;
   height: 8px;
-  margin-left: 75px;
+  margin-left: 69px;
   margin-top: -40px;
   display: table;
   table-layout: fixed;
@@ -499,8 +497,6 @@
 .btn_left_able {
   display: inline-block;
   background-color: #ffffff;
-  background: url(http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/btn-left-able.png)
-    no-repeat;
   border: none;
   width: 10px;
   height: 13px;
@@ -512,8 +508,6 @@
 .btn_left_disable {
   display: inline-block;
   background-color: #ffffff;
-  background: url(http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/btn-left-disable.png)
-    no-repeat;
   border: none;
   width: 10px;
   height: 13px;
@@ -525,8 +519,6 @@
 .btn_right_able {
   display: inline-block;
   background-color: #ffffff;
-  background: url(http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/btn-right-able.png)
-    no-repeat;
   border: none;
   width: 10px;
   height: 13px;
@@ -539,8 +531,6 @@
 .btn_right_disable {
   display: inline-block;
   background-color: #ffffff;
-  background: url(http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/btn-right-disable.png)
-    no-repeat;
   border: none;
   width: 10px;
   height: 13px;
@@ -558,8 +548,6 @@
 }
 
 .tpu_off {
-  background: url("http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/ic-tpu-off.png")
-    no-repeat;
   margin-top: 5px;
   height: 22px;
   width: 54px;
@@ -568,8 +556,6 @@
 }
 
 .tpu_on {
-  background: url("http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/ic-tpu-on.png")
-    no-repeat;
   margin-top: 5px;
   height: 22px;
   width: 54px;
@@ -589,33 +575,6 @@
 .hover {
   display: none;
   background-color: #ffb2b2;
-}
-
-.btn-test {
-  display: inline-block;
-  background-color: #ffffff;
-  background: url(http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/btn-right-disable.png)
-    no-repeat;
-  border: none;
-  width: 10px;
-  height: 13px;
-  position: absolute;
-  z-index: 10;
-  margin-left: 20px;
-  outline: none;
-}
-
-.btn-test:after {
-  display: inline-block;
-  background-color: #ffffff;
-  background: url(http://localhost:1880/node_modules/node-red-contrib-edgetpu-inference/lib/img/btn-right-disable.png)
-    no-repeat;
-  border: none;
-  width: 10px;
-  height: 13px;
-  position: absolute;
-  z-index: 10;
-  margin-left: 20px;
 }
 
 .nr-dashboard-cardpanel {

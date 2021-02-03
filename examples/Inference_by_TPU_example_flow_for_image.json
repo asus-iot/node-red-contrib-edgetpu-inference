@@ -1,24 +1,24 @@
 [
     {
-        "id": "ae61bbf9.c7e788",
+        "id": "3ad5e8ea.198608",
         "type": "tab",
         "label": "ASUS IoT Image Classification",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "5f1b7fbf.680d7",
+        "id": "2aac40a.e08d5c",
         "type": "ui_group",
         "z": "",
         "name": "EdgeTPU Demonstration",
         "tab": "",
         "order": 3,
         "disp": true,
-        "width": "30",
+        "width": "35",
         "collapse": false
     },
     {
-        "id": "b4c9988b.b17f28",
+        "id": "10bdae52.747f62",
         "type": "ui_base",
         "theme": {
             "name": "theme-light",
@@ -114,38 +114,58 @@
         }
     },
     {
-        "id": "2e1f2d8c.6d5fc2",
+        "id": "e511f82.25aa708",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "2aac40a.e08d5c",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "4c208720.3ea298",
         "type": "ui_group",
         "z": "",
         "name": "EdgeTPU Demonstration",
-        "tab": "fcb2decc.cb9a7",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "6bf8d853.a6cae8",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "8d0bb956.1ae018",
         "order": 3,
         "disp": true,
         "width": "35",
         "collapse": false
     },
     {
-        "id": "fcb2decc.cb9a7",
+        "id": "8d0bb956.1ae018",
         "type": "ui_tab",
         "z": "",
         "name": "ASUS IoT Image Classification",
         "icon": "dashboard"
     },
     {
-        "id": "142dd38d.ec656c",
+        "id": "d6876661.126108",
         "type": "ui_spacer",
         "name": "spacer",
-        "group": "2e1f2d8c.6d5fc2",
+        "group": "6bf8d853.a6cae8",
         "order": 2,
         "width": 26,
         "height": 1
     },
     {
-        "id": "bdab6eaa.aa83d",
+        "id": "65866e7c.afb3",
         "type": "ui_button",
-        "z": "ae61bbf9.c7e788",
+        "z": "3ad5e8ea.198608",
         "name": "StartDemo",
-        "group": "2e1f2d8c.6d5fc2",
+        "group": "6bf8d853.a6cae8",
         "order": 1,
         "width": 4,
         "height": 1,
@@ -162,15 +182,15 @@
         "y": 340,
         "wires": [
             [
-                "2469a494.01f09c",
-                "c919e8c1.74e828"
+                "c0187530.c25558",
+                "73c11582.0cc6ec"
             ]
         ]
     },
     {
-        "id": "c919e8c1.74e828",
+        "id": "73c11582.0cc6ec",
         "type": "trigger",
-        "z": "ae61bbf9.c7e788",
+        "z": "3ad5e8ea.198608",
         "name": "",
         "op1": "1",
         "op2": "0",
@@ -187,28 +207,14 @@
         "y": 280,
         "wires": [
             [
-                "a4e357a0.fef3e8"
+                "1ab47169.d7811f"
             ]
         ]
     },
     {
-        "id": "a4e357a0.fef3e8",
-        "type": "ui_performance",
-        "z": "ae61bbf9.c7e788",
-        "group": "2e1f2d8c.6d5fc2",
-        "name": "",
-        "title": "",
-        "order": 4,
-        "width": "10",
-        "height": 14,
-        "x": 670,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "2469a494.01f09c",
+        "id": "c0187530.c25558",
         "type": "function",
-        "z": "ae61bbf9.c7e788",
+        "z": "3ad5e8ea.198608",
         "name": "Image_person",
         "func": "\nmsg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/person.jpg\"\nreturn msg;",
         "outputs": 1,
@@ -219,15 +225,15 @@
         "y": 420,
         "wires": [
             [
-                "cd859e9a.50d62"
+                "af20a689.9297b8"
             ]
         ],
         "icon": "font-awesome/fa-file-video-o"
     },
     {
-        "id": "cd859e9a.50d62",
+        "id": "af20a689.9297b8",
         "type": "SZ Image Classification",
-        "z": "ae61bbf9.c7e788",
+        "z": "3ad5e8ea.198608",
         "name": "",
         "intype": "3",
         "tputype": "0",
@@ -239,29 +245,48 @@
         "resample": "0",
         "outimage": true,
         "loop": false,
-        "speed": false,
-        "parselabel": "",
+        "isparse": false,
+        "parselabel": "person",
+        "speedup": false,
+        "dnscale": "10",
+        "dstime": "0",
         "x": 700,
         "y": 420,
         "wires": [
             [
-                "883d4ec4.19c2c"
+                "29b67048.cb4cd"
             ]
         ]
     },
     {
-        "id": "883d4ec4.19c2c",
+        "id": "29b67048.cb4cd",
         "type": "ui_result",
-        "z": "ae61bbf9.c7e788",
-        "group": "2e1f2d8c.6d5fc2",
+        "z": "3ad5e8ea.198608",
+        "group": "6bf8d853.a6cae8",
         "name": "",
-        "title": "Label",
-        "order": 3,
+        "ip": "127.0.0.1",
+        "title": "",
+        "order": 2,
         "resolution": "1",
-        "width": "25",
-        "height": 14,
-        "x": 910,
+        "width": 0,
+        "height": 0,
+        "x": 940,
         "y": 420,
+        "wires": []
+    },
+    {
+        "id": "1ab47169.d7811f",
+        "type": "ui_performance",
+        "z": "3ad5e8ea.198608",
+        "group": "6bf8d853.a6cae8",
+        "name": "",
+        "ip": "127.0.0.1",
+        "title": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "x": 740,
+        "y": 280,
         "wires": []
     }
 ]
