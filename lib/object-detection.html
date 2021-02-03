@@ -15,10 +15,6 @@
             modelpath: {value: "", required:true},
             labelpath: {value: "", required:true},
             threshold: {value: "0.1", required:true},
-	    topk: {value: "4", required:true},
-	    keepratio: {value: "0", required:true},
-	    relativecoord: {value: "1", required: true},
-	    resample: {value: "0", required: true},
 	    outimage: {value: 'true'},
             loop: {value: 'false'},
 	    isparse: {value: 'false'},
@@ -162,35 +158,6 @@
     <div class="form-row">
 	<label style="padding-left:25px; margin-right:-25px">threshold</label>        
 	<input type="text" id="node-input-threshold" placeholder="threshold (float)">
-    </div>
-    <div class="form-row">
-	<label style="padding-left:25px; margin-right:-25px">top_k</label>        
-	<input type="text" id="node-input-topk" placeholder=" top_k (int)">
-    </div>
-    <div class="form-row">
-	<label style="padding-left:25px; margin-right:-25px">keep_ratio</label>
-	<select id="node-input-keepratio">
-            <option value="1"> True</option>
-            <option value="0"> False</option>
-        </select>
-    </div>
-    <div class="form-row">
-	<label style="padding-left:25px; margin-right:-25px">relative_coord</label>        
-	<select id="node-input-relativecoord">
-            <option value="1"> True</option>
-            <option value="0"> False</option>
-        </select>
-    </div>
-    <div class="form-row">
-	<label style="padding-left:25px; margin-right:-25px">resample</label>        
-	<select id="node-input-resample">
-            <option value="0"> PIL.Image.NEAREST</option>
-            <option value="1"> PIL.Image.BOX</option>
-            <option value="2"> PIL.Image.BILIEAR</option>
-            <option value="3"> PIL.Image.HAMMING</option>
-            <option value="4"> PIL.Image.BICUBIC</option>
-            <option value="5"> PIL.Image.LANCZOS</option>
-        </select>
     </div>
     <!-- API Parameters -->
     <div class="form-row">
