@@ -292,11 +292,16 @@
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 150px;
   height: 60px;
   background-color: #ffffff;
-  color: #454545;
-  text-align: center;
+  color: #5d8de4;
+  font-family: Roboto;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0px 10px 15px 0 rgba(177, 185, 221, 0.67);
+  border: solid 1px #e9e9f3;
+  text-align: left;
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
@@ -304,11 +309,25 @@
   left: -40px;
   z-index: 20;
   word-break: break-all;
+  display:none;
 }
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
   word-break: break-all;
+}
+
+.Model_Name {
+  width: auto;
+  height: auto;
+  font-size: 13px;
+  font-stretch: normal;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.15;
+  letter-spacing: normal;
+  text-align: left;
+  color: #454545;
 }
 
 .chart_container_cpu {
