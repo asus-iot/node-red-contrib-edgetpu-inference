@@ -53,7 +53,7 @@ sudo ufw allow 1880
 
 # Install inference node
 sudo apt-get install -y python3-opencv
-sudo apt-get install -y python3-edgetpu
+sudo apt-get install -y python3-pycoral
 npm install --prefix=~/.node-red node-red-dashboard
 npm install --prefix=~/.node-red node-red-contrib-image-tools
 npm install --prefix=~/.node-red ../node-red-contrib-edgetpu-inference

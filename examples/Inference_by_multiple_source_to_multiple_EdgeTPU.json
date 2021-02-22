@@ -1,15 +1,1313 @@
 [
     {
-        "id": "1f57e4f4.2ee2e3",
+        "id": "ebc4b53b.40f8a8",
         "type": "tab",
         "label": "ASUS IoT Multiple EdgeTPU",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "3f005fb2.e53548",
+        "id": "d7cca4e8.7cc3a",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "7",
+        "collapse": false
+    },
+    {
+        "id": "547a28b1.6ee8a8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "ec70c002.cf3ff",
+        "type": "ui_group",
+        "z": "",
+        "name": "Performance1",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "92aa167d.4ca208",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "515f07b0.7425e8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Frame Statistics",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "4e71ac82.ad3ecc",
+        "type": "ui_group",
+        "z": "",
+        "name": "Video Capture",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "d1233294.de036",
+        "type": "ui_group",
+        "z": "",
+        "name": "Video Statistics",
+        "tab": "",
+        "order": 4,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "c2e56643.c2fda8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Report",
+        "tab": "",
+        "order": 5,
+        "disp": true,
+        "width": "12"
+    },
+    {
+        "id": "88a8fa92.ff2d88",
+        "type": "ui_group",
+        "z": "",
+        "name": "Performance",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "3ceed7ad.210778",
+        "type": "ui_group",
+        "z": "",
+        "name": "G_2",
+        "tab": "",
+        "order": 4,
+        "disp": false,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "e791b135.34a45",
+        "type": "ui_group",
+        "z": "",
+        "name": "176p MJPEG Stream",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "707f5536.8f439c",
+        "type": "ui_group",
+        "z": "",
+        "name": "352p MJPEG Stream",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "7947c5dd.d98c9c",
+        "type": "ui_group",
+        "z": "",
+        "name": "1080p MJPEG Stream",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "9ddac27.2d0494",
+        "type": "ui_group",
+        "z": "",
+        "name": "MJPEG Encoder1",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "11",
+        "collapse": false
+    },
+    {
+        "id": "c42c34f9.678c98",
+        "type": "ui_group",
+        "z": "",
+        "name": "G_2",
+        "tab": "",
+        "order": 4,
+        "disp": false,
+        "width": "8",
+        "collapse": false
+    },
+    {
+        "id": "84d9192d.8b9c38",
+        "type": "ui_group",
+        "z": "",
+        "name": "Performance",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "185dda83.d25735",
+        "type": "ui_group",
+        "z": "",
+        "name": "Performance",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "5c52934c.da04bc",
+        "type": "ui_group",
+        "z": "",
+        "name": "Performance",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "69ba4907.89fec8",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "1bbd2ca4.846c33",
+        "type": "tls-config",
+        "z": "",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false
+    },
+    {
+        "id": "7339795d.f65bf8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Performance",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "1df789ea.3705b6",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "2414ec7f.7b920c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Performance",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "7082c655.deed88",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "27",
+        "collapse": false
+    },
+    {
+        "id": "a0617683.4e45c8",
+        "type": "ui_group",
+        "name": "Default1",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "869d0417.e6b24",
+        "type": "ui_group",
+        "z": "",
+        "name": "Performance",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "403c8205.60f1f4",
+        "type": "ui_group",
+        "z": "",
+        "name": "Performance",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "f968a69b.0142c",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "27",
+        "collapse": false
+    },
+    {
+        "id": "3fe7af71.0d1d1",
+        "type": "ui_group",
+        "name": "Default1",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "c2d3ec83.6b3898",
+        "type": "ui_group",
+        "z": "",
+        "name": "Performance",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "3d16fa18.7e1a4e",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "27",
+        "collapse": false
+    },
+    {
+        "id": "ea7876f6.74161",
+        "type": "ui_group",
+        "name": "Default1",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "f5412a2.39f4458",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "27",
+        "collapse": false
+    },
+    {
+        "id": "751097d7.15f9c8",
+        "type": "ui_group",
+        "name": "Default1",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "c942cae0.3b797",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "27",
+        "collapse": false
+    },
+    {
+        "id": "b39801f0.313958",
+        "type": "ui_group",
+        "name": "Default1",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "c68edbca.e2aa18",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "27",
+        "collapse": false
+    },
+    {
+        "id": "d2f587d1.589298",
+        "type": "ui_group",
+        "name": "Default1",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "7f62e9fb.7577",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default1",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "35",
+        "collapse": false
+    },
+    {
+        "id": "f3fd30dd.88a14",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "27",
+        "collapse": false
+    },
+    {
+        "id": "4fb2cb7e.89b514",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default1",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "7f310fd1.a6726",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default1",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "35",
+        "collapse": false
+    },
+    {
+        "id": "51f3d5fb.0f41e4",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default1",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "35",
+        "collapse": false
+    },
+    {
+        "id": "6f4efe80.6f9e1",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "51f3d5fb.0f41e4",
+        "order": 1,
+        "width": 30,
+        "height": 1
+    },
+    {
+        "id": "f58935d6.b76d68",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "51f3d5fb.0f41e4",
+        "order": 3,
+        "width": 30,
+        "height": 1
+    },
+    {
+        "id": "999212a1.e22468",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default1",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "60741b8.e369c64",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default1",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "754bed39.c1e19c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default1",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "c710027d.baab6",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default1",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "a29e8097.3946c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default1",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "3212854e.0a3c72",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default1",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "8918a093.068af",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default1",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "f8c4befc.ec64c8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Object-Detection AIOT",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "98767128.b3f53",
+        "type": "ui_group",
+        "z": "",
+        "name": "Image-Classificaiton Demo",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "a7548bcc.6abba",
+        "type": "ui_group",
+        "z": "",
+        "name": "Object-Detection AIOT",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "f49f70c2.b3d94",
+        "type": "ui_group",
+        "z": "",
+        "name": "Image-Classificaiton Demo",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "4660ec12.755734",
+        "type": "ui_group",
+        "z": "",
+        "name": "Object-Detection AIOT",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "3152aed7.9cce5a",
+        "type": "ui_group",
+        "z": "",
+        "name": "Image-Classificaiton Demo",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "fdc42148.60d13",
+        "type": "ui_group",
+        "z": "",
+        "name": "Object-Detection AIOT",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "b3606599.989348",
+        "type": "ui_group",
+        "z": "",
+        "name": "Image-Classificaiton Demo",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "a174bfb5.50531",
+        "type": "ui_group",
+        "z": "",
+        "name": "2222222222222",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "b45c4059.3e909",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "71077c79.836974",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "55bd9117.007838",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "97dfc868.2f008",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "55bd9117.007838",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "954ced11.079348",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "3a103b13.88fd7c",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "56d5e280.24fe64",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "3a103b13.88fd7c",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "a6049632.36f918",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "967b165a.33d708",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "ae0d7f39.34dac",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "967b165a.33d708",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "db21128d.0f1598",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "c41a93ec.8de01",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "db21128d.0f1598",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "f6909978.01d17",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "c527c1e1.cab5a8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "f6909978.01d17",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "2f5a5ecf.c00542",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "a869ba7.2a66948",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "2f5a5ecf.c00542",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "3d9ea69c.3b082a",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "7da2a2f7.c71fd4",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "3d9ea69c.3b082a",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "8d552f0c.d1c76",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "db360c0e.3fb5f8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "8d552f0c.d1c76",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "5815f376.d337d4",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "fe407057.2ca5a8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "5815f376.d337d4",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "76687e40.cefff",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "ff7ce312.857c",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "76687e40.cefff",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "1d90c0fb.cae99f",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "1ff703ad.e6774c",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "1d90c0fb.cae99f",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "957f220a.f099e8",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "53ec50c7.9072a8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "957f220a.f099e8",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "574e0ef7.bbe268",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "eb30e495.6cb2a8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "574e0ef7.bbe268",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "9e76b430.b8e5f8",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "35",
+        "collapse": false
+    },
+    {
+        "id": "18e52cf2.903623",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "9e76b430.b8e5f8",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "2ad1b23e.31e8be",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "35",
+        "collapse": false
+    },
+    {
+        "id": "a12dda06.67a2d8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "2ad1b23e.31e8be",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "98728b21.db43a8",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "35",
+        "collapse": false
+    },
+    {
+        "id": "e5dae314.6983e",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "98728b21.db43a8",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "5c9d5a9e.33e2b4",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "9977ae40.c71f4",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "35",
+        "collapse": false
+    },
+    {
+        "id": "5f1aa109.87792",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "9977ae40.c71f4",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "d417365.5518348",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "35",
+        "collapse": false
+    },
+    {
+        "id": "12061169.7bbaff",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "d417365.5518348",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "6dae5bd7.1f3d7c",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "35",
+        "collapse": false
+    },
+    {
+        "id": "183b706.c74761",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#2e5ea8",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#2e5ea8",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#2e5ea8",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#5384d0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#2e5ea8",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "a9238594.c4b75",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "6dae5bd7.1f3d7c",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "266c9108.ee3946",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "c9de7025.400a18",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeTPU Demonstration",
+        "tab": "1f8d2ce0.cd53f3",
+        "order": 3,
+        "disp": true,
+        "width": "35",
+        "collapse": false
+    },
+    {
+        "id": "1f8d2ce0.cd53f3",
+        "type": "ui_tab",
+        "z": "",
+        "name": "ASUS IoT Image Classification",
+        "icon": "dashboard"
+    },
+    {
+        "id": "46e94086.711bb",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "c9de7025.400a18",
+        "order": 2,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "3b918a1.1e59376",
         "type": "SZ Object Detection",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "EdgeTPU 0",
         "intype": "2",
         "tputype": "0",
@@ -17,27 +1315,25 @@
         "modelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite",
         "labelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/coco_labels.txt",
         "threshold": "0.5",
-        "topk": "5",
-        "keepratio": "0",
-        "relativecoord": "0",
-        "resample": "0",
         "outimage": true,
         "loop": true,
-        "speed": true,
+        "isparse": true,
         "parselabel": "Person",
-        "downscale": "",
+        "speedup": false,
+        "dnscale": "50",
+        "dstime": "0",
         "x": 450,
         "y": 180,
         "wires": [
             [
-                "92eb2ed.00487d"
+                "79bc1873.b58c48"
             ]
         ]
     },
     {
-        "id": "92eb2ed.00487d",
+        "id": "79bc1873.b58c48",
         "type": "function",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "Convert image to payload",
         "func": "if (msg.image === undefined)\n    return 0;\nmsg.payload=msg.image;\nreturn msg;",
         "outputs": 1,
@@ -48,14 +1344,14 @@
         "y": 180,
         "wires": [
             [
-                "84f468b6.15d64"
+                "52438cb8.b88e0c"
             ]
         ]
     },
     {
-        "id": "89666b31.8e98d8",
+        "id": "250c3db2.c66ac2",
         "type": "inject",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "Start",
         "props": [
             {
@@ -77,21 +1373,21 @@
         "y": 180,
         "wires": [
             [
-                "59da59ac.f0ad18",
-                "4e6539f4.cedc9",
-                "8e1ba5e8.8379c8",
-                "8c064fec.40d3d",
-                "2f5756d8.c1b5aa",
-                "9104c393.c99138",
-                "1562f0c0.4420c7",
-                "cde4db5c.751d98"
+                "376827f.f4728d8",
+                "9de27416.2b152",
+                "1a85d4d.d8df8ab",
+                "a4d8d32d.b586c",
+                "43f152d1.41499c",
+                "77be810.0924f",
+                "3a91a61c.75adfa",
+                "98d2768c.36d37"
             ]
         ]
     },
     {
-        "id": "b25e8b2a.a0f23",
+        "id": "e4b62fd3.33bc48",
         "type": "function",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "Convert image to payload",
         "func": "if (msg.image === undefined)\n    return 0;\nmsg.payload=msg.image;\nreturn msg;",
         "outputs": 1,
@@ -102,14 +1398,14 @@
         "y": 240,
         "wires": [
             [
-                "437e2757.ca349"
+                "c984ee8e.11466"
             ]
         ]
     },
     {
-        "id": "31df748d.d54484",
+        "id": "d74d2a0c.81848",
         "type": "function",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "Convert image to payload",
         "func": "if (msg.image === undefined)\n    return 0;\nmsg.payload=msg.image;\nreturn msg;",
         "outputs": 1,
@@ -120,14 +1416,14 @@
         "y": 300,
         "wires": [
             [
-                "f60fe8e8.9c5898"
+                "9a3b235c.d1f61"
             ]
         ]
     },
     {
-        "id": "94efff8c.3ec968",
+        "id": "3cd8c5ad.0c313a",
         "type": "function",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "Convert image to payload",
         "func": "if (msg.image === undefined)\n    return 0;\nmsg.payload=msg.image;\nreturn msg;",
         "outputs": 1,
@@ -138,14 +1434,14 @@
         "y": 360,
         "wires": [
             [
-                "571db7e1.6a1d"
+                "35e337df.7705f8"
             ]
         ]
     },
     {
-        "id": "6ff998d5.a03818",
+        "id": "4b98989f.26ec48",
         "type": "function",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "Convert image to payload",
         "func": "if (msg.image === undefined)\n    return 0;\nmsg.payload=msg.image;\nreturn msg;",
         "outputs": 1,
@@ -156,14 +1452,14 @@
         "y": 420,
         "wires": [
             [
-                "8b02c6a7.e612f"
+                "718d4a16.0c982c"
             ]
         ]
     },
     {
-        "id": "c403134.fd0c5f",
+        "id": "ea8dc042.287d58",
         "type": "function",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "Convert image to payload",
         "func": "if (msg.image === undefined)\n    return 0;\nmsg.payload=msg.image;\nreturn msg;",
         "outputs": 1,
@@ -174,14 +1470,14 @@
         "y": 480,
         "wires": [
             [
-                "62f85002.786dd8"
+                "29fa4561.f0ede2"
             ]
         ]
     },
     {
-        "id": "b47107cb.1dbce",
+        "id": "34859b49.e038a4",
         "type": "function",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "Convert image to payload",
         "func": "if (msg.image === undefined)\n    return 0;\nmsg.payload=msg.image;\nreturn msg;",
         "outputs": 1,
@@ -192,14 +1488,14 @@
         "y": 540,
         "wires": [
             [
-                "abec7ee4.0f0b38"
+                "de13e40f.15c53"
             ]
         ]
     },
     {
-        "id": "5da58ec6.090e88",
+        "id": "acf92b42.90bc2",
         "type": "function",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "Convert image to payload",
         "func": "if (msg.image === undefined)\n    return 0;\nmsg.payload=msg.image;\nreturn msg;",
         "outputs": 1,
@@ -210,14 +1506,14 @@
         "y": 600,
         "wires": [
             [
-                "49bfd73d.52edf"
+                "844a536b.b4e298"
             ]
         ]
     },
     {
-        "id": "4e6539f4.cedc9",
+        "id": "9de27416.2b152",
         "type": "function",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "Video_1",
         "func": "msg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/v1.mp4\"\nreturn msg;",
         "outputs": 1,
@@ -228,15 +1524,15 @@
         "y": 180,
         "wires": [
             [
-                "3f005fb2.e53548"
+                "3b918a1.1e59376"
             ]
         ],
         "icon": "font-awesome/fa-file-video-o"
     },
     {
-        "id": "84f468b6.15d64",
+        "id": "52438cb8.b88e0c",
         "type": "image viewer",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "",
         "width": "200",
         "data": "payload",
@@ -248,9 +1544,9 @@
         ]
     },
     {
-        "id": "437e2757.ca349",
+        "id": "c984ee8e.11466",
         "type": "image viewer",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "",
         "width": "200",
         "data": "payload",
@@ -262,9 +1558,9 @@
         ]
     },
     {
-        "id": "f60fe8e8.9c5898",
+        "id": "9a3b235c.d1f61",
         "type": "image viewer",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "",
         "width": "200",
         "data": "payload",
@@ -276,9 +1572,9 @@
         ]
     },
     {
-        "id": "571db7e1.6a1d",
+        "id": "35e337df.7705f8",
         "type": "image viewer",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "",
         "width": "200",
         "data": "payload",
@@ -290,9 +1586,9 @@
         ]
     },
     {
-        "id": "8b02c6a7.e612f",
+        "id": "718d4a16.0c982c",
         "type": "image viewer",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "",
         "width": "200",
         "data": "payload",
@@ -304,9 +1600,9 @@
         ]
     },
     {
-        "id": "62f85002.786dd8",
+        "id": "29fa4561.f0ede2",
         "type": "image viewer",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "",
         "width": "200",
         "data": "payload",
@@ -318,9 +1614,9 @@
         ]
     },
     {
-        "id": "abec7ee4.0f0b38",
+        "id": "de13e40f.15c53",
         "type": "image viewer",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "",
         "width": "200",
         "data": "payload",
@@ -332,9 +1628,9 @@
         ]
     },
     {
-        "id": "49bfd73d.52edf",
+        "id": "844a536b.b4e298",
         "type": "image viewer",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "",
         "width": "200",
         "data": "payload",
@@ -346,9 +1642,9 @@
         ]
     },
     {
-        "id": "46c82e4.09c40d",
+        "id": "adaa1f00.8cf6",
         "type": "inject",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "",
         "props": [
             {
@@ -370,21 +1666,21 @@
         "y": 320,
         "wires": [
             [
-                "3f005fb2.e53548",
-                "b2ef687b.bcd2f",
-                "aa22851f.6e24c",
-                "745142cd.be9a24",
-                "39d34cfa.88fa84",
-                "5fce0d8e.5ea63c",
-                "6a54a677.3f9ac",
-                "42ed2d55.3da664"
+                "3b918a1.1e59376",
+                "300b4856.b74fb",
+                "4f26b4a9.249544",
+                "f7307ebe.995fe",
+                "622ab52e.0f4cf4",
+                "4bd345f2.c44c0c",
+                "4398028e.8aeeac",
+                "f7e1fa29.0559c"
             ]
         ]
     },
     {
-        "id": "f27be623.3656d8",
+        "id": "d2f03128.4a4178",
         "type": "function",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "",
         "func": "const ttt=\"HELLO\\nworld\"\nnode.status({ fill: \"green\", shape: \"dot\", text: \"5\"});\n\nreturn msg;",
         "outputs": 1,
@@ -398,9 +1694,9 @@
         ]
     },
     {
-        "id": "91ce07b5.0dc4f8",
+        "id": "a21a0d8a.0b3e1",
         "type": "inject",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "",
         "props": [
             {
@@ -422,14 +1718,14 @@
         "y": 1467,
         "wires": [
             [
-                "f27be623.3656d8"
+                "d2f03128.4a4178"
             ]
         ]
     },
     {
-        "id": "8e1ba5e8.8379c8",
+        "id": "1a85d4d.d8df8ab",
         "type": "function",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "Video_2",
         "func": "msg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/v2.mp4\"\nreturn msg;",
         "outputs": 1,
@@ -440,15 +1736,15 @@
         "y": 240,
         "wires": [
             [
-                "b2ef687b.bcd2f"
+                "300b4856.b74fb"
             ]
         ],
         "icon": "font-awesome/fa-file-video-o"
     },
     {
-        "id": "8c064fec.40d3d",
+        "id": "a4d8d32d.b586c",
         "type": "function",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "Video_3",
         "func": "msg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/v3.mp4\"\nreturn msg;",
         "outputs": 1,
@@ -459,15 +1755,15 @@
         "y": 300,
         "wires": [
             [
-                "42ed2d55.3da664"
+                "f7e1fa29.0559c"
             ]
         ],
         "icon": "font-awesome/fa-file-video-o"
     },
     {
-        "id": "2f5756d8.c1b5aa",
+        "id": "43f152d1.41499c",
         "type": "function",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "Video_4",
         "func": "msg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/v4.mp4\"\nreturn msg;",
         "outputs": 1,
@@ -478,15 +1774,15 @@
         "y": 360,
         "wires": [
             [
-                "aa22851f.6e24c"
+                "4f26b4a9.249544"
             ]
         ],
         "icon": "font-awesome/fa-file-video-o"
     },
     {
-        "id": "9104c393.c99138",
+        "id": "77be810.0924f",
         "type": "function",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "Video_5",
         "func": "msg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/v5.mp4\"\nreturn msg;",
         "outputs": 1,
@@ -497,15 +1793,15 @@
         "y": 420,
         "wires": [
             [
-                "745142cd.be9a24"
+                "f7307ebe.995fe"
             ]
         ],
         "icon": "font-awesome/fa-file-video-o"
     },
     {
-        "id": "1562f0c0.4420c7",
+        "id": "3a91a61c.75adfa",
         "type": "function",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "Video_6",
         "func": "msg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/v6.mp4\"\nreturn msg;",
         "outputs": 1,
@@ -516,15 +1812,15 @@
         "y": 480,
         "wires": [
             [
-                "39d34cfa.88fa84"
+                "622ab52e.0f4cf4"
             ]
         ],
         "icon": "font-awesome/fa-file-video-o"
     },
     {
-        "id": "cde4db5c.751d98",
+        "id": "98d2768c.36d37",
         "type": "function",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "Video_7",
         "func": "msg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/v7.mp4\"\nreturn msg;",
         "outputs": 1,
@@ -535,15 +1831,15 @@
         "y": 540,
         "wires": [
             [
-                "5fce0d8e.5ea63c"
+                "4bd345f2.c44c0c"
             ]
         ],
         "icon": "font-awesome/fa-file-video-o"
     },
     {
-        "id": "59da59ac.f0ad18",
+        "id": "376827f.f4728d8",
         "type": "function",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "Video_8",
         "func": "msg.payload=\"./node_modules/node-red-contrib-edgetpu-inference/test_data/v8.mp4\"\nreturn msg;",
         "outputs": 1,
@@ -554,15 +1850,15 @@
         "y": 600,
         "wires": [
             [
-                "6a54a677.3f9ac"
+                "4398028e.8aeeac"
             ]
         ],
         "icon": "font-awesome/fa-file-video-o"
     },
     {
-        "id": "b2ef687b.bcd2f",
+        "id": "300b4856.b74fb",
         "type": "SZ Object Detection",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "EdgeTPU 1",
         "intype": "2",
         "tputype": "0",
@@ -570,26 +1866,25 @@
         "modelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite",
         "labelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/coco_labels.txt",
         "threshold": "0.5",
-        "topk": "5",
-        "keepratio": "0",
-        "relativecoord": "0",
-        "resample": "0",
         "outimage": true,
         "loop": true,
-        "speed": true,
+        "isparse": true,
         "parselabel": "Person",
+        "speedup": false,
+        "dnscale": "50",
+        "dstime": "0",
         "x": 450,
         "y": 240,
         "wires": [
             [
-                "b25e8b2a.a0f23"
+                "e4b62fd3.33bc48"
             ]
         ]
     },
     {
-        "id": "aa22851f.6e24c",
+        "id": "4f26b4a9.249544",
         "type": "SZ Object Detection",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "EdgeTPU 3",
         "intype": "2",
         "tputype": "0",
@@ -597,26 +1892,25 @@
         "modelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite",
         "labelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/coco_labels.txt",
         "threshold": "0.5",
-        "topk": "5",
-        "keepratio": "0",
-        "relativecoord": "0",
-        "resample": "0",
         "outimage": true,
         "loop": true,
-        "speed": true,
+        "isparse": true,
         "parselabel": "Person",
+        "speedup": false,
+        "dnscale": "50",
+        "dstime": "0",
         "x": 450,
         "y": 360,
         "wires": [
             [
-                "94efff8c.3ec968"
+                "3cd8c5ad.0c313a"
             ]
         ]
     },
     {
-        "id": "745142cd.be9a24",
+        "id": "f7307ebe.995fe",
         "type": "SZ Object Detection",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "EdgeTPU 4",
         "intype": "2",
         "tputype": "0",
@@ -624,26 +1918,25 @@
         "modelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite",
         "labelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/coco_labels.txt",
         "threshold": "0.5",
-        "topk": "5",
-        "keepratio": "0",
-        "relativecoord": "0",
-        "resample": "0",
         "outimage": true,
         "loop": true,
-        "speed": true,
+        "isparse": true,
         "parselabel": "Person",
+        "speedup": false,
+        "dnscale": "50",
+        "dstime": "0",
         "x": 450,
         "y": 420,
         "wires": [
             [
-                "6ff998d5.a03818"
+                "4b98989f.26ec48"
             ]
         ]
     },
     {
-        "id": "39d34cfa.88fa84",
+        "id": "622ab52e.0f4cf4",
         "type": "SZ Object Detection",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "EdgeTPU 5",
         "intype": "2",
         "tputype": "0",
@@ -651,26 +1944,25 @@
         "modelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite",
         "labelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/coco_labels.txt",
         "threshold": "0.5",
-        "topk": "5",
-        "keepratio": "0",
-        "relativecoord": "0",
-        "resample": "0",
         "outimage": true,
         "loop": true,
-        "speed": true,
+        "isparse": true,
         "parselabel": "Person",
+        "speedup": false,
+        "dnscale": "50",
+        "dstime": "0",
         "x": 450,
         "y": 480,
         "wires": [
             [
-                "c403134.fd0c5f"
+                "ea8dc042.287d58"
             ]
         ]
     },
     {
-        "id": "5fce0d8e.5ea63c",
+        "id": "4bd345f2.c44c0c",
         "type": "SZ Object Detection",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "EdgeTPU 6",
         "intype": "2",
         "tputype": "0",
@@ -678,26 +1970,25 @@
         "modelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite",
         "labelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/coco_labels.txt",
         "threshold": "0.5",
-        "topk": "5",
-        "keepratio": "0",
-        "relativecoord": "0",
-        "resample": "0",
         "outimage": true,
         "loop": true,
-        "speed": true,
+        "isparse": true,
         "parselabel": "Person",
+        "speedup": false,
+        "dnscale": "50",
+        "dstime": "0",
         "x": 450,
         "y": 540,
         "wires": [
             [
-                "b47107cb.1dbce"
+                "34859b49.e038a4"
             ]
         ]
     },
     {
-        "id": "6a54a677.3f9ac",
+        "id": "4398028e.8aeeac",
         "type": "SZ Object Detection",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "EdgeTPU 7",
         "intype": "2",
         "tputype": "0",
@@ -705,26 +1996,25 @@
         "modelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite",
         "labelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/coco_labels.txt",
         "threshold": "0.5",
-        "topk": "5",
-        "keepratio": "0",
-        "relativecoord": "0",
-        "resample": "0",
         "outimage": true,
         "loop": true,
-        "speed": true,
+        "isparse": true,
         "parselabel": "Person",
+        "speedup": false,
+        "dnscale": "50",
+        "dstime": "0",
         "x": 450,
         "y": 600,
         "wires": [
             [
-                "5da58ec6.090e88"
+                "acf92b42.90bc2"
             ]
         ]
     },
     {
-        "id": "42ed2d55.3da664",
+        "id": "f7e1fa29.0559c",
         "type": "SZ Object Detection",
-        "z": "1f57e4f4.2ee2e3",
+        "z": "ebc4b53b.40f8a8",
         "name": "EdgeTPU 2",
         "intype": "2",
         "tputype": "0",
@@ -732,19 +2022,18 @@
         "modelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite",
         "labelpath": "./node_modules/node-red-contrib-edgetpu-inference/test_data/coco_labels.txt",
         "threshold": "0.5",
-        "topk": "5",
-        "keepratio": "0",
-        "relativecoord": "0",
-        "resample": "0",
         "outimage": true,
         "loop": true,
-        "speed": true,
+        "isparse": true,
         "parselabel": "Person",
+        "speedup": false,
+        "dnscale": "50",
+        "dstime": "0",
         "x": 450,
         "y": 300,
         "wires": [
             [
-                "31df748d.d54484"
+                "d74d2a0c.81848"
             ]
         ]
     }
