@@ -19,6 +19,8 @@
   background-color: rgba(117, 194, 219, 0.15);
   grid-column: 4 / 5;
   grid-row: 2 / 3;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .v {
@@ -155,7 +157,6 @@
   width: 283px;
   height: 480px;
   overflow-x: hidden;
-  overflow-y: auto;
 }
 
 .Result-Name-box {
