@@ -303,10 +303,10 @@
   border: solid 1px #e9e9f3;
   text-align: left;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 10px 10px 5px 10px;
   position: absolute;
   top: -60px;
-  left: -40px;
+  left: -60px;
   z-index: 20;
   word-break: break-all;
   display:none;

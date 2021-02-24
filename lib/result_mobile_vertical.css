@@ -155,7 +155,7 @@
 }
 
 .Result-Name {
-  width: 85px;
+  width: auto;
   font-family: Roboto;
   font-weight: 500;
   font-size: 1.125rem;
