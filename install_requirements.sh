@@ -16,6 +16,13 @@
 readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly TEST_DATA_URL=https://github.com/google-coral/edgetpu/raw/master/test_data
 
+if [ "$(ping -c 1 -w 3 8.8.8.8)" ] ; then
+	echo "The network connect normally"
+else
+	echo "Please connect the network ..."
+	exit 0
+fi
+
 sudo apt-get update
 
 # Install curl npm
