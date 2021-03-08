@@ -464,6 +464,7 @@
   float: left;
   margin-left: 150px;
   margin-top: 5px;
+  visibility:hidden;
 }
 
 .tpu_page1 {
