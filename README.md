@@ -1,4 +1,4 @@
-# node-red-contrib-edgetpu-inference `1.0.1`
+# node-red-contrib-edgetpu-inference `1.0.2`
 This package contains Node-RED nodes which taking advantage of Shenzhou TPU to infer using AI models. There are also nodes for GUI presentation of result and system performance in this package.
 
 # Install
@@ -465,6 +465,13 @@ Run the following npm command in your Node-RED user directory (typically ~/.node
 ]
 ```
 
+# Acknowledgements
+This dashboard was inspired by
+
+* [node-red-dashboard](https://flows.nodered.org/node/node-red-dashboard) from the Node-RED team
+
+This Python3 was inspired by
+* [node-red-contrib-python3-function](https://flows.nodered.org/node/node-red-contrib-python3-function) from Arrnau Orriols
 
 
 
