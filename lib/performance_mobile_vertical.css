@@ -122,27 +122,27 @@
   width: 28px;
   height: 28px;
   position: absolute;
-  top: 1086px;
-  left: 310px;
+  left: 295px;
   object-fit: contain;
+  margin-top: 45px;
 }
 
 .ic_ram {
   width: 28px;
   height: 28px;
   position: absolute;
-  top: 1286px;
-  left: 310px;
+  left: 295px;
   object-fit: contain;
+  margin-top: 245px;
 }
 
 .ic_tpu {
   width: 28px;
   height: 28px;
   position: absolute;
-  top: 1486px;
-  left: 310px;
+  left: 295px;
   object-fit: contain;
+  margin-top: 445px;
 }
 
 .High {
@@ -332,8 +332,6 @@
 
 .chart_container_cpu {
   position: absolute;
-  top: 1114px;
-  left: 60px;
   margin: auto;
   height: 50px;
   width: 273px;
@@ -341,8 +339,6 @@
 
 .chart_container_cpu_bar {
   position: absolute;
-  top: 1155px;
-  left: 21px;
   margin: auto;
   height: 100px;
   width: 45px;
@@ -350,8 +346,6 @@
 
 .chart_container_ram {
   position: absolute;
-  top: 1314px;
-  left: 60px;
   margin: auto;
   height: 50px;
   width: 273px;
@@ -359,8 +353,6 @@
 
 .chart_container_ram_bar {
   position: absolute;
-  top: 1355px;
-  left: 21px;
   margin: auto;
   height: 100px;
   width: 45px;
@@ -369,10 +361,26 @@
 .chart_container_tpu_bar {
   position: absolute;
   margin: auto;
-  top: 1569px;
-  left: 69px;
   height: 105px;
   width: 265px;
+}
+
+.chart_canvas{
+  top: 14px;
+  left: 40px;
+  position: absolute;
+}
+
+.bar_canvas{
+  top: 55px;
+  left: 2px;
+  position: absolute;
+}
+
+.tpu_bar_canvas{
+  position: absolute;
+  left: 48px;
+  top: 34px
 }
 
 .tpu_right {
@@ -602,8 +610,9 @@
 }
 
 .nr-dashboard-theme .nr-dashboard-template {
-  width: 375px !important;
+  width: 350px !important;
   height: 980px !important;
+  margin: 20px 20px !important;
 }
 
 .nr-dashboard-cardcontainer > * {
@@ -617,8 +626,38 @@
 
 .nr-dashboard-cardcontainer {
   width: 375px !important;
+  left:10px !important;
 }
 
 .nr-dashboard-theme .nr-dashboard-spacer {
   width: 375px !important;
+}
+
+md-card {
+  display: unset;
+}
+
+.nr-dashboard-theme .nr-dashboard-button .md-button {
+  height:48px;
+  width:350px;
+  margin-left: 0px !important;
+}
+
+.nr-dashboard-template {
+  padding: unset;
+}
+
+.masonry-container > .visible {
+  left: 50px ;
+}
+
+.nr-dashboard-cardpanel > p {
+  min-height: 0px;
+  margin-left: 12px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+body.nr-dashboard-theme {
+  background-color: #ffffff;
 }

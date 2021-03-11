@@ -122,27 +122,27 @@
   width: 34px;
   height: 34px;
   position: absolute;
-  top: 45px;
   left: 415px;
   object-fit: contain;
+  margin-top: 40px;
 }
 
 .ic_ram {
   width: 34px;
   height: 34px;
   position: absolute;
-  top: 245px;
   left: 415px;
   object-fit: contain;
+  margin-top: 240px;
 }
 
 .ic_tpu {
   width: 34px;
   height: 34px;
   position: absolute;
-  top: 445px;
   left: 415px;
   object-fit: contain;
+  margin-top: 440px;
 }
 
 .High {
@@ -344,8 +344,6 @@
 
 .chart_container_cpu {
   position: absolute;
-  top: 27px;
-  left: 71.5px;
   margin: auto;
   height: 50px;
   width: 370px;
@@ -353,8 +351,6 @@
 
 .chart_container_cpu_bar {
   position: absolute;
-  top: 117px;
-  left: 32px;
   margin: auto;
   height: 100px;
   width: 45px;
@@ -362,8 +358,6 @@
 
 .chart_container_ram {
   position: absolute;
-  top: 226px;
-  left: 71.5px;
   margin: auto;
   height: 50px;
   width: 370px;
@@ -371,8 +365,6 @@
 
 .chart_container_ram_bar {
   position: absolute;
-  top: 316px;
-  left: 32px;
   margin: auto;
   height: 100px;
   width: 45px;
@@ -381,10 +373,26 @@
 .chart_container_tpu_bar {
   position: absolute;
   margin: auto;
-  top: 532px;
-  left: 74px;
   height: 105px;
   width: 370px;
+}
+
+.chart_canvas{
+  top: -35px;
+  left: 48px;
+  position: absolute;
+}
+
+.bar_canvas{
+  top: 55px;
+  left: 10px;
+  position: absolute;
+}
+
+.tpu_bar_canvas{
+  position: absolute;
+  left: 50px;
+  top: 34px
 }
 
 .tpu_right {

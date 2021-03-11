@@ -122,7 +122,6 @@
   width: 36px;
   height: 36px;
   position: absolute;
-  top: 982px;
   left: 610px;
   object-fit: contain;
 }
@@ -131,7 +130,6 @@
   width: 36px;
   height: 36px;
   position: absolute;
-  top: 1182px;
   left: 610px;
   object-fit: contain;
 }
@@ -140,7 +138,6 @@
   width: 36px;
   height: 36px;
   position: absolute;
-  top: 1382px;
   left: 610px;
   object-fit: contain;
 }
@@ -332,17 +329,14 @@
 
 .chart_container_cpu {
   position: absolute;
-  top: 865px;
-  left: 70px;
   margin: auto;
   height: 50px;
   width: 570px;
+  z-index:10px;
 }
 
 .chart_container_cpu_bar {
   position: absolute;
-  top: 1055px;
-  left: 32px;
   margin: auto;
   height: 100px;
   width: 45px;
@@ -350,8 +344,6 @@
 
 .chart_container_ram {
   position: absolute;
-  top: 1064px;
-  left: 70px;
   margin: auto;
   height: 50px;
   width: 570px;
@@ -359,8 +351,6 @@
 
 .chart_container_ram_bar {
   position: absolute;
-  top: 1254px;
-  left: 32px;
   margin: auto;
   height: 100px;
   width: 45px;
@@ -369,10 +359,26 @@
 .chart_container_tpu_bar {
   position: absolute;
   margin: auto;
-  top: 1467px;
-  left: 71px;
   height: 105px;
   width: 575px;
+}
+
+.chart_canvas {
+  top: -135px;
+  left: 48px;
+  position: absolute;
+}
+
+.bar_canvas{
+  top: 55px;
+  left: 10px;
+  position: absolute;
+}
+
+.tpu_bar_canvas{
+  position: absolute;
+  left: 50px;
+  top: 34px
 }
 
 .tpu_right {
@@ -621,33 +627,59 @@
 }
 
 .nr-dashboard-cardpanel {
-    width:685px;
+  width: 685px;
 }
 
 .nr-dashboard-theme .nr-dashboard-template {
-    width:685px !important;
-    height: 880px !important;
+  width: 685px !important;
+  height: 880px !important;
+  margin: 20px 20px !important;
 }
 
-.nr-dashboard-cardcontainer > *{
-    margin: unset !important;
-    position: unset;
+.nr-dashboard-cardcontainer > * {
+  margin: unset !important;
+  position: unset;
 }
 
 .nr-dashboard-cardtitle {
-    width: 685px !important;
+  width: 685px !important;
 }
 
 .nr-dashboard-cardcontainer {
   width: 685px !important;
+  left:10px !important;
 }
 
 .nr-dashboard-theme .nr-dashboard-spacer {
   width: 685px !important;
-  height: 10px !important;
+}
+
+md-card {
+  display: unset;
+}
+
+.nr-dashboard-theme .nr-dashboard-button .md-button {
+  height:48px;
+  width:685px;
+  margin-left: -4px !important;
+  margin-bottom: -50px !important;
+}
+
+.nr-dashboard-template {
+  padding: unset;
 }
 
 .masonry-container > .visible {
-  left: 40px ;
+  left: 50px ;
 }
 
+.nr-dashboard-cardpanel > p {
+  min-height: 0px;
+  margin-left: 12px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+body.nr-dashboard-theme {
+  background-color: #ffffff;
+}
