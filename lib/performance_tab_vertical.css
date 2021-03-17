@@ -661,7 +661,7 @@ md-card {
 .nr-dashboard-theme .nr-dashboard-button .md-button {
   height:48px;
   width:685px;
-  margin-left: -4px !important;
+  margin-left: -15px !important;
   margin-bottom: -50px !important;
 }
 

@@ -614,3 +614,11 @@
   display: none;
   background-color: #ffb2b2;
 }
+
+.nr-dashboard-cardpanel > p{
+  min-height: unset;
+}
+
+.nr-dashboard-button .md-button {
+  left: 10px;
+}

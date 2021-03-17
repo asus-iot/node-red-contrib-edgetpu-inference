@@ -305,3 +305,11 @@
   background-color: #c0def0;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
 }
+
+.nr-dashboard-cardpanel > p{
+  min-height: unset;
+}
+
+.nr-dashboard-button .md-button {
+  left: 10px;
+}
